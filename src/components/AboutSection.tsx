@@ -2,7 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import { animate, motion, useInView, useReducedMotion } from "framer-motion";
 import { MapPin, Target } from "lucide-react";
 import SectionHeading from "./SectionHeading";
-import { aboutParagraphs, skills, stats, type Accent, type TextSegment } from "../data/content";
+import {
+  aboutParagraphs,
+  identity,
+  skills,
+  stats,
+  type Accent,
+  type TextSegment,
+} from "../data/content";
 
 const ACCENT_CLASS: Record<Accent, string> = {
   indigo: "text-indigo-400",
@@ -156,6 +163,23 @@ export default function AboutSection() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-5"
           >
+            <div className="flex items-center gap-5">
+              <img
+                src={identity.photo}
+                alt="Zyad Husseini, data analyst and economist based between France and Egypt"
+                width={112}
+                height={112}
+                loading="lazy"
+                decoding="async"
+                className="h-28 w-28 shrink-0 rounded-2xl object-cover ring-2 ring-indigo-400/40"
+              />
+              <div>
+                <p className="text-lg font-bold text-white">{identity.name}</p>
+                <p className="text-sm text-slate-400">{identity.title}</p>
+                <p className="mt-1 font-mono text-xs text-cyan-400">{identity.location}</p>
+              </div>
+            </div>
+
             {aboutParagraphs.map((segments, i) => (
               <Paragraph key={i} segments={segments} />
             ))}

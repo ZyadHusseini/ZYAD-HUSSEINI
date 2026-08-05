@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://www.zyadhusseini.com/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.zyadhusseini.com/assets/zyad-husseini.jpg</image:loc>
+      <image:title>Zyad Husseini</image:title>
+      <image:caption>Zyad Husseini — data analyst, economist and entrepreneur based between France and Egypt.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.zyadhusseini.com/assets/og-image.jpg</image:loc>
+      <image:title>Zyad Husseini — Data Analyst &amp; Economist</image:title>
+      <image:caption>Zyad Husseini, MSc Data Analytics student at Kedge Business School.</image:caption>
+    </image:image>
+  </url>
+</urlset>

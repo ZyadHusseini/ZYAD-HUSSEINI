@@ -43,6 +43,9 @@ export const identity = {
   linkedin: "https://linkedin.com/in/zyadmhr",
   github: "https://github.com/ZyadHusseini",
   linktree: "https://linktr.ee/zyadmhrhusseini",
+  /** Swap this file for a square headshot >=1200x1200, then re-run
+   *  `python3 scripts/make-og-image.py` to rebuild the social card. */
+  photo: "/assets/zyad-husseini.jpg",
   openTo: "Full-time, Internships & Consulting",
   heroSub:
     "Transforming complex data into actionable insights. MSc Data Analytics student at Kedge Business School with a passion for economics and business intelligence.",

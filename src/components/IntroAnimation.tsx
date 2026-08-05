@@ -153,12 +153,14 @@ export default function IntroAnimation({ onComplete }: { onComplete: () => void 
 
           {/* name + tagline + chips */}
           <div className="relative z-10 px-6 text-center">
-            <h1 className="text-6xl font-extrabold leading-tight tracking-tight md:text-8xl">
+            {/* Deliberately not an <h1>: the hero owns the page's single H1, and
+                a duplicate here would split the heading signal for crawlers. */}
+            <p className="text-6xl font-extrabold leading-tight tracking-tight md:text-8xl">
               <Letters word="ZYAD" delay={0.15} />
               <br className="md:hidden" />
               <span className="hidden md:inline">&nbsp;</span>
               <Letters word="HUSSEINI" delay={0.5} />
-            </h1>
+            </p>
             <Typewriter text="DATA ANALYST & ECONOMIST" delay={1.3} />
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               {chips.map((chip, i) => (
