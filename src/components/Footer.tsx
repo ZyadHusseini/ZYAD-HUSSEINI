@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Link, Linkedin, Mail } from "lucide-react";
+import { ArrowUp, Github, Instagram, Link, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { identity } from "../data/content";
 
 export default function Footer() {
@@ -20,6 +20,8 @@ export default function Footer() {
             { href: identity.linkedin, icon: Linkedin, label: "LinkedIn" },
             { href: identity.github, icon: Github, label: "GitHub" },
             { href: identity.linktree, icon: Link, label: "Linktree" },
+            { href: identity.instagram, icon: Instagram, label: "Instagram" },
+            { href: identity.whatsapp, icon: MessageCircle, label: "WhatsApp" },
             { href: `mailto:${identity.email}`, icon: Mail, label: "Email" },
           ].map(({ href, icon: Icon, label }) => (
             <a

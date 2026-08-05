@@ -10,9 +10,11 @@ import {
   CandlestickChart,
   Code2,
   Database,
+  Facebook,
   FileSpreadsheet,
   Gamepad2,
   GraduationCap,
+  Instagram,
   LayoutDashboard,
   Leaf,
   LineChart,
@@ -39,10 +41,18 @@ export const identity = {
   title: "Data Analyst & Economist",
   location: "France / Egypt",
   email: "zyadmhrhusseini@aucegypt.edu",
+  /** Company-domain address published on the Linktree. */
+  businessEmail: "zmr@pnmico.com",
   phones: ["+33 07 68 87 98 41", "+20 100 222 4134"],
   linkedin: "https://linkedin.com/in/zyadmhr",
   github: "https://github.com/ZyadHusseini",
   linktree: "https://linktr.ee/zyadmhrhusseini",
+  instagram: "https://www.instagram.com/Electro_zyad",
+  /** The Linktree publishes this as phone=1044438885, i.e. the Egyptian
+   *  mobile 010 4443 8885 without its +20 country code. wa.me requires
+   *  full international format, so the country code is restored here. */
+  whatsapp: "https://wa.me/201044438885",
+  whatsappDisplay: "+20 104 443 8885",
   /** Swap this file for a square headshot >=1200x1200, then re-run
    *  `python3 scripts/make-og-image.py` to rebuild the social card. */
   photo: "/assets/zyad-husseini.jpg",
@@ -382,6 +392,12 @@ export const projects: Project[] = [
 /* Ventures                                                            */
 /* ------------------------------------------------------------------ */
 
+export interface VentureSocial {
+  label: string;
+  url: string;
+  icon: LucideIcon;
+}
+
 export interface Venture {
   name: string;
   category: string;
@@ -390,6 +406,7 @@ export interface Venture {
   displayUrl: string;
   icon: LucideIcon;
   gradient: string;
+  socials?: VentureSocial[];
 }
 
 export const venturesIntro =
@@ -404,6 +421,9 @@ export const ventures: Venture[] = [
     displayUrl: "pnmagency.com",
     icon: PenTool,
     gradient: "from-rose-400 to-red-500",
+    socials: [
+      { label: "PNM Agency on Instagram", url: "https://www.instagram.com/pnmagency1/", icon: Instagram },
+    ],
   },
   {
     name: "PNM Group",
@@ -413,6 +433,10 @@ export const ventures: Venture[] = [
     displayUrl: "pnmholding.com",
     icon: Truck,
     gradient: "from-amber-400 to-orange-500",
+    socials: [
+      { label: "Pack N Move on Instagram", url: "https://www.instagram.com/packandmove", icon: Instagram },
+      { label: "Pack N Move on Facebook", url: "https://www.facebook.com/packandmove", icon: Facebook },
+    ],
   },
   {
     name: "NAVI",

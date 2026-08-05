@@ -7,9 +7,11 @@ import {
   FileText,
   FolderKanban,
   Github,
+  Instagram,
   Link,
   Linkedin,
   Mail,
+  MessageCircle,
   Rocket,
   User,
 } from "lucide-react";
@@ -89,6 +91,32 @@ export default function CommandPalette() {
         hint: "linktr.ee/zyadmhrhusseini",
         icon: Link,
         run: () => window.open(identity.linktree, "_blank"),
+      },
+      {
+        id: "whatsapp",
+        label: "Message on WhatsApp",
+        hint: identity.whatsappDisplay,
+        icon: MessageCircle,
+        run: () => window.open(identity.whatsapp, "_blank"),
+      },
+      {
+        id: "instagram",
+        label: "Open Instagram",
+        hint: "@Electro_zyad",
+        icon: Instagram,
+        run: () => window.open(identity.instagram, "_blank"),
+      },
+      {
+        id: "copy-business-email",
+        label: "Copy business email",
+        hint: identity.businessEmail,
+        icon: Copy,
+        run: () => {
+          navigator.clipboard
+            .writeText(identity.businessEmail)
+            .then(() => toast("Business email copied to clipboard"))
+            .catch(() => toast("Couldn't copy email"));
+        },
       },
     ];
   }, [toast]);

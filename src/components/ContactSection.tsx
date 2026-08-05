@@ -2,12 +2,15 @@ import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import {
   Briefcase,
+  Building2,
   Copy,
   Github,
+  Instagram,
   Link,
   Linkedin,
   Mail,
   MapPin,
+  MessageCircle,
   Phone,
   Send,
 } from "lucide-react";
@@ -103,9 +106,9 @@ export default function ContactSection() {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Partial<Record<Field["id"], string>>>({});
 
-  const copyEmail = async () => {
+  const copyEmail = async (address: string) => {
     try {
-      await navigator.clipboard.writeText(identity.email);
+      await navigator.clipboard.writeText(address);
       toast("Email copied to clipboard");
     } catch {
       toast("Couldn't copy — email is shown above");
@@ -133,6 +136,14 @@ export default function ContactSection() {
       label: "Email",
       value: identity.email,
       accent: "text-indigo-400",
+      copy: true,
+    },
+    {
+      icon: Building2,
+      label: "Business email",
+      value: identity.businessEmail,
+      accent: "text-cyan-400",
+      copyValue: identity.businessEmail,
       copy: true,
     },
     {
@@ -175,7 +186,7 @@ export default function ContactSection() {
                   {card.copy && (
                     <button
                       type="button"
-                      onClick={copyEmail}
+                      onClick={() => copyEmail(card.value)}
                       className="glass shrink-0 p-2.5 text-slate-400 transition-colors hover:border-cyan-400/50 hover:text-cyan-300"
                       aria-label="Copy email address"
                     >
@@ -213,6 +224,25 @@ export default function ContactSection() {
               >
                 <Link className="h-4 w-4 text-emerald-400" aria-hidden />
                 Linktree
+              </a>
+              <a
+                href={identity.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Message Zyad on WhatsApp at ${identity.whatsappDisplay}`}
+                className="glass flex items-center gap-2.5 px-5 py-3 text-sm font-medium text-white transition-all hover:-translate-y-0.5 hover:border-emerald-400/50"
+              >
+                <MessageCircle className="h-4 w-4 text-emerald-400" aria-hidden />
+                WhatsApp
+              </a>
+              <a
+                href={identity.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="glass flex items-center gap-2.5 px-5 py-3 text-sm font-medium text-white transition-all hover:-translate-y-0.5 hover:border-rose-400/50"
+              >
+                <Instagram className="h-4 w-4 text-rose-400" aria-hidden />
+                Instagram
               </a>
             </div>
           </motion.div>
