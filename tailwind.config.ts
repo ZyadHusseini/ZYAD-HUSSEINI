@@ -16,8 +16,11 @@ export default {
         "text-secondary": "#94a3b8",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
-        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
+        // "… Variable" families come from the self-hosted @fontsource-variable
+        // packages imported in main.tsx; the non-variable names are kept as a
+        // fallback for anyone who already has the static fonts installed.
+        sans: ["'Inter Variable'", "Inter", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["'JetBrains Mono Variable'", "'JetBrains Mono'", "ui-monospace", "monospace"],
       },
       keyframes: {
         "drift-a": {
