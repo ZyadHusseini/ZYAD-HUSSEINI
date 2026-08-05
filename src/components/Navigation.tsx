@@ -68,7 +68,11 @@ export default function Navigation({ visible }: { visible: boolean }) {
           aria-label="Primary"
           className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"
         >
-          <a href="#top" className="text-xl font-extrabold tracking-tight gradient-text">
+          <a
+            href="/"
+            aria-label="Zyad Husseini — back to top"
+            className="text-xl font-extrabold tracking-tight gradient-text"
+          >
             {identity.monogram}
           </a>
 

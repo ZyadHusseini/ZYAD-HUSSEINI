@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import CommandPalette from "./components/CommandPalette";
 import { ToastProvider } from "./components/Toast";
 import { hasIntroPlayed, prefersReducedMotion } from "./lib/introFlag";
+import { useCleanAnchors } from "./lib/useCleanAnchors";
 
 export default function App() {
   // Intro is skipped entirely if it already played this session or the
@@ -21,6 +22,8 @@ export default function App() {
   const [introDone, setIntroDone] = useState(
     () => hasIntroPlayed() || prefersReducedMotion()
   );
+
+  useCleanAnchors();
 
   return (
     <MotionConfig reducedMotion="user">

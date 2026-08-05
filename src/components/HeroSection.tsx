@@ -87,7 +87,11 @@ export default function HeroSection({ started }: { started: boolean }) {
   });
 
   return (
-    <section ref={ref} id="top" className="relative flex min-h-screen items-center overflow-hidden">
+    <section
+      ref={ref}
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden focus:outline-none"
+    >
       {/* parallax background */}
       <motion.div className="absolute inset-0" style={reduced ? undefined : { y: bgY }} aria-hidden>
         <div className="grid-bg absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_75%)]" />
