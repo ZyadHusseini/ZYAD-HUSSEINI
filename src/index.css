@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0a0a0f;
+  }
+
+  body {
+    @apply bg-bg-primary font-sans text-text-secondary antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(99, 102, 241, 0.4);
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #6366f1, #06b6d4);
+    border-radius: 5px;
+    border: 2px solid #0a0a0f;
+  }
+
+  :focus-visible {
+    outline: 2px solid #06b6d4;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Hide the native cursor only on precise-pointer devices (custom cursor takes over) */
+  @media (hover: hover) and (pointer: fine) {
+    body.custom-cursor-active,
+    body.custom-cursor-active a,
+    body.custom-cursor-active button,
+    body.custom-cursor-active input,
+    body.custom-cursor-active textarea,
+    body.custom-cursor-active [role="button"] {
+      cursor: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .ambient {
+      animation: none !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .eyebrow {
+    @apply font-mono text-sm uppercase tracking-[0.3em] text-accent-cyan;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.07) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
