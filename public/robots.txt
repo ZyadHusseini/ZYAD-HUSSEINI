@@ -4,7 +4,87 @@
 User-agent: *
 Allow: /
 
-# Social and messaging preview crawlers need the OG image and its page.
+# ---------------------------------------------------------------------------
+# Search engines
+# ---------------------------------------------------------------------------
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI assistants — grounding, retrieval and training crawlers.
+#
+# Allowed deliberately. Being quotable when someone asks an assistant
+# "who is Zyad Husseini?" is a goal of this site. Google-Extended matters
+# most here: it governs Gemini and AI Overviews specifically, and Google
+# treats it separately from Googlebot, so crawling for Search does not imply
+# availability to Gemini. The rest are listed explicitly so the intent is
+# recorded rather than inherited from "User-agent: *".
+# ---------------------------------------------------------------------------
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI — training, search index, and live user-triggered fetches
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl — a primary corpus behind many open models
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Social and messaging preview crawlers — these need the OG image and its page.
+# ---------------------------------------------------------------------------
+
 User-agent: Twitterbot
 Allow: /
 

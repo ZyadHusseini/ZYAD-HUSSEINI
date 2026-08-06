@@ -1,0 +1,82 @@
+# Zyad Husseini
+
+> Data analyst, economist and entrepreneur based between France and Egypt.
+> MSc Data Analytics student at Kedge Business School; BA Economics from
+> The American University in Cairo. Works in data analytics, business
+> intelligence, investment analysis and AI product development, and builds
+> ventures across tech, marketing and logistics.
+
+Canonical site: https://www.zyadhusseini.com/
+
+## Identity
+
+- Full name: Zyad Husseini
+- Role: Data Analyst & Economist
+- Based: France and Egypt
+- Languages: English (native/bilingual), Arabic (native/bilingual), French (professional working)
+- Open to: full-time roles, internships and consulting in data analytics, business intelligence and economics
+
+## Education
+
+- MSc Data Analytics — Kedge Business School, France (expected 2027)
+- BA Economics — The American University in Cairo, Egypt (2025). Minors in Business Administration and Computer Science. Dean's List.
+- American & International Baccalaureate (IB) — MASE, Egypt (2020)
+
+## Skills
+
+Power BI, DAX, Python, SQL, STATA, R, C++, Microsoft Office, econometrics,
+business intelligence, financial analysis, market research.
+
+## Experience
+
+- Business Development Associate (Jan 2026 – present)
+- Research and Marketing Specialist (Dec 2025 – present)
+- AI Product Development & Website Creation — Brayn Solutions (Dec 2025 – present)
+- Investment Analyst — Media Trade (Dec 2025 – present)
+- AI Automation & Workflows Specialist — BUB AI (Oct 2025 – present)
+- Data Analytics Intern — EFG Hermes (Aug 2025 – Sep 2025). Built Power BI dashboards for financial data visualization.
+- Data Analytics — AR CORP (Jan 2025 – Jun 2025). Integrated a cash-flow statement with an ERP system in Power BI.
+- Data Analytics Intern — Pack N Move (Dec 2024 – Jan 2025)
+- Marketeer — Pack N Move (May 2020 – Mar 2021)
+- Accountant — Pack N Move (May 2019 – Mar 2020)
+
+## Ventures
+
+- PNM Agency — digital agency: https://pnmagency.com
+- PNM Group — logistics and holding company: https://pnmholding.com
+- NAVI — student operating system (ed-tech): https://navi.geo-ed.tech/landing
+- Matgarak — digital products: https://matgarak.com
+- Qemto — machine-learning market forecasting for the Egyptian Exchange: https://kemto-egx.vercel.app
+
+## Selected projects
+
+- GDP & Renewable Energy Analysis (2025) — econometric thesis on the relationship between GDP and renewable-energy consumption, built in STATA.
+- Nasdaq 100 Analysis (2025) — index performance, trends and market dynamics in Python.
+- Power BI Dashboards, EFG Hermes (2025) — financial data visualization.
+- ERP Cash Flow Integration, AR CORP (2025) — live cash-flow reporting in Power BI.
+- Job Application Tracker (2025) — Python and database automation.
+- Python Financial Tracker (2025) — personal finance app with data visualization.
+- Marketing Strategy Report (2025) — market research and growth recommendations.
+- C++ Game Development (2022) — object-oriented game built from scratch.
+
+## Recognition
+
+- Third place, EFG Hermes Stock Market Competition (2024)
+- Finomics Stock Market Competition (2024)
+- Venture Capital Competition, AUC (2023)
+- Economics course with the ITC and United Nations, Italy (2024)
+- CMA Part One (2024)
+- Professional basketball player, El Haras El Gomhory (2018–2024)
+
+## Profiles
+
+- LinkedIn: https://www.linkedin.com/in/zyadmhr/
+- GitHub: https://github.com/ZyadHusseini
+- Linktree: https://linktr.ee/zyadmhrhusseini
+
+## Contact
+
+- Email: zyadmhrhusseini@aucegypt.edu
+- Business email: zmr@pnmico.com
+- CV (English): https://www.zyadhusseini.com/assets/Zyad_Husseini_CV_English.pdf
+- CV (French): https://www.zyadhusseini.com/assets/Zyad_Husseini_CV_French.pdf
