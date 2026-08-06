@@ -48,9 +48,25 @@ business intelligence, financial analysis, market research.
 - Matgarak — digital products: https://matgarak.com
 - Qemto — machine-learning market forecasting for the Egyptian Exchange: https://kemto-egx.vercel.app
 
+## Research
+
+### The Impact of Renewable Energy Adoption on Economic Growth (2025)
+
+Econometrics research paper, Department of Economics, School of Business,
+The American University in Cairo (ECON 408101, supervised by Dr. Mina Ayad).
+
+- Question: do increases in renewable energy consumption spur economic growth?
+- Data: World Bank World Development Indicators, 7 countries, 1990–2023, 238 country-year observations.
+- Methods: panel OLS, White test, robust OLS, maximum likelihood estimation, fixed effects with year dummies, 2SLS instrumenting renewable consumption with its own lag, Cragg–Donald and underidentification tests, Newey–West, Hausman test, random effects.
+- Finding: renewable energy consumption is consistently associated with slower short-run growth. Under 2SLS, a one-unit rise in the renewable share is associated with a 1.44 percentage point reduction in GDP per capita growth (p = 0.029). Gross capital formation is positive and highly significant; tertiary enrolment, trade openness and population growth are not significant in any specification.
+- Interpretation: the result argues for sequencing the energy transition (efficiency, grid integration, workforce training, capital-formation incentives) rather than slowing decarbonisation.
+- Paper: https://www.zyadhusseini.com/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf
+- Stata do-file: https://www.zyadhusseini.com/research/renewable-energy-growth-stata.do
+- Dataset: https://www.zyadhusseini.com/research/renewable-energy-growth-dataset.xlsx
+
 ## Selected projects
 
-- GDP & Renewable Energy Analysis (2025) — econometric thesis on the relationship between GDP and renewable-energy consumption, built in STATA.
+- Renewable Energy & Economic Growth (2025) — see the Research section above.
 - Nasdaq 100 Analysis (2025) — index performance, trends and market dynamics in Python.
 - Power BI Dashboards, EFG Hermes (2025) — financial data visualization.
 - ERP Cash Flow Integration, AR CORP (2025) — live cash-flow reporting in Power BI.

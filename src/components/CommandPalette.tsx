@@ -5,6 +5,7 @@ import {
   Copy,
   Download,
   FileText,
+  FlaskConical,
   FolderKanban,
   Github,
   Instagram,
@@ -42,7 +43,16 @@ export default function CommandPalette() {
       { id: "about", label: "Jump to About", hint: "section", icon: User, run: jump("about") },
       { id: "experience", label: "Jump to Experience", hint: "section", icon: Briefcase, run: jump("experience") },
       { id: "projects", label: "Jump to Projects", hint: "section", icon: FolderKanban, run: jump("projects") },
+      { id: "research", label: "Jump to Research", hint: "section", icon: FlaskConical, run: jump("research") },
       { id: "ventures", label: "Jump to Ventures", hint: "section", icon: Rocket, run: jump("ventures") },
+      {
+        id: "paper",
+        label: "Open research paper",
+        hint: "renewable energy & growth (PDF)",
+        icon: FileText,
+        run: () =>
+          window.open("/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf", "_blank"),
+      },
       { id: "cv", label: "Jump to CV", hint: "section", icon: FileText, run: jump("cv") },
       { id: "contact", label: "Jump to Contact", hint: "section", icon: Mail, run: jump("contact") },
       {

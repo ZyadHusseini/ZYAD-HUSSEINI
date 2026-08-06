@@ -19,4 +19,12 @@
       <image:caption>Zyad Husseini, MSc Data Analytics student at Kedge Business School.</image:caption>
     </image:image>
   </url>
+  <!-- The paper is a standalone indexable document: it carries the full name,
+       institution and findings, and PDFs rank in their own right. -->
+  <url>
+    <loc>https://www.zyadhusseini.com/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

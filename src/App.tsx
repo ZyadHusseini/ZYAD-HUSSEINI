@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ResearchSection from "./components/ResearchSection";
 import VenturesSection from "./components/VenturesSection";
 import CVHighlights from "./components/CVHighlights";
 import ContactSection from "./components/ContactSection";
@@ -37,6 +38,7 @@ export default function App() {
           <AboutSection />
           <ExperienceSection />
           <ProjectsSection />
+          <ResearchSection />
           <VenturesSection />
           <CVHighlights />
           <ContactSection />

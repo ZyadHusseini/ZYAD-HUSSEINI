@@ -12,6 +12,8 @@ import {
   Database,
   Facebook,
   FileSpreadsheet,
+  FileText,
+  FileType,
   Gamepad2,
   GraduationCap,
   Instagram,
@@ -21,8 +23,10 @@ import {
   Megaphone,
   Package,
   PenTool,
+  Sheet,
   Sigma,
   Store,
+  Terminal,
   Trophy,
   Truck,
   Wallet,
@@ -251,20 +255,21 @@ export const projectFilters = [
 
 export const projects: Project[] = [
   {
-    title: "GDP & Renewable Energy Analysis",
+    title: "Renewable Energy & Economic Growth",
     category: "research",
     year: "2025",
-    description: "Econometric thesis on the relationship between GDP and renewable-energy consumption.",
-    tools: ["Econometrics", "STATA", "Research"],
+    description:
+      "Econometrics research paper testing whether a rising renewable energy share accelerates GDP per capita growth.",
+    tools: ["Econometrics", "STATA", "Panel Data", "2SLS"],
     icon: Leaf,
     gradient: "from-emerald-400 to-teal-500",
     caseStudy: {
       problem:
-        "Does economic growth drive renewable-energy adoption — or the other way around? The direction and strength of this relationship is contested in the literature, and the answer shapes energy policy.",
+        "Clean energy is widely assumed to be good for growth, but the empirical literature disagrees on whether that holds in the short run — and the answer shapes how aggressively a country should sequence its energy transition.",
       approach:
-        "Built an econometric model in STATA on cross-country panel data, testing the GDP–renewables relationship with regression analysis and robustness checks, and grounding the specification in a structured literature review.",
+        "Built a World Bank WDI panel of 7 countries over 1990–2023 (238 observations) in Stata and worked through the full diagnostic chain: OLS, a White test for heteroskedasticity, robust OLS, maximum likelihood, fixed effects with year dummies, then 2SLS instrumenting renewable consumption with its own lag to address endogeneity, with Newey–West for autocorrelation and a Hausman test to choose between fixed and random effects.",
       outcome:
-        "A completed undergraduate thesis with statistically supported findings on the GDP–renewables link, defended as part of my BA Economics at The American University in Cairo.",
+        "Renewable energy consumption was consistently associated with slower short-run growth — under 2SLS, a one-unit rise in the renewable share cut GDP per capita growth by 1.44 percentage points (p = 0.029). Gross capital formation stayed positive and highly significant. The paper, Stata do-file and dataset are all published on this site.",
     },
   },
   {
@@ -468,6 +473,101 @@ export const ventures: Venture[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* Research                                                            */
+/* ------------------------------------------------------------------ */
+
+export interface ResearchAsset {
+  label: string;
+  detail: string;
+  href: string;
+  icon: LucideIcon;
+}
+
+export interface ResearchFinding {
+  value: string;
+  label: string;
+}
+
+export interface ResearchPaper {
+  title: string;
+  type: string;
+  institution: string;
+  department: string;
+  course: string;
+  supervisor: string;
+  year: string;
+  /** Plain-language summary — also used verbatim in the JSON-LD abstract. */
+  abstract: string;
+  question: string;
+  data: string;
+  findings: ResearchFinding[];
+  methods: string[];
+  conclusion: string;
+  assets: ResearchAsset[];
+}
+
+export const researchPapers: ResearchPaper[] = [
+  {
+    title: "The Impact of Renewable Energy Adoption on Economic Growth",
+    type: "Econometrics Research Paper",
+    institution: "The American University in Cairo",
+    department: "Department of Economics, School of Business",
+    course: "ECON 408101",
+    supervisor: "Dr. Mina Ayad",
+    year: "2025",
+    abstract:
+      "A panel study of whether raising the renewable share of final energy consumption accelerates GDP per capita growth. Across OLS, robust OLS, maximum likelihood, fixed effects, and instrumental-variable estimation, renewable energy consumption is consistently associated with slower short-run growth — a result that runs against the common assumption that clean energy is straightforwardly growth-positive.",
+    question: "Do increases in renewable energy consumption spur economic growth?",
+    data: "World Bank World Development Indicators · 7 countries · 1990–2023 · 238 country-year observations",
+    findings: [
+      { value: "−1.44pp", label: "GDP per capita growth per unit rise in renewable share (2SLS)" },
+      { value: "p = 0.029", label: "Significant after instrumenting for endogeneity" },
+      { value: "7 × 34", label: "Countries × years of panel data" },
+    ],
+    methods: [
+      "Panel OLS",
+      "White test",
+      "Robust OLS",
+      "Maximum Likelihood",
+      "Fixed effects",
+      "2SLS / IV",
+      "Cragg–Donald",
+      "Newey–West",
+      "Hausman test",
+      "Random effects",
+    ],
+    conclusion:
+      "Gross capital formation was positive and highly significant throughout, while tertiary enrolment, trade openness and population growth were not significant in any specification. Year dummies absorbed the 2008 financial crisis and the 2020 pandemic. The policy reading is not to slow decarbonisation but to sequence it — pairing renewable rollout with energy efficiency, grid integration, workforce training and capital-formation incentives so the transition's short-run costs are offset.",
+    assets: [
+      {
+        label: "Read the paper",
+        detail: "PDF · 71 pages",
+        href: "/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf",
+        icon: FileText,
+      },
+      {
+        label: "Manuscript",
+        detail: "DOCX",
+        href: "/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.docx",
+        icon: FileType,
+      },
+      {
+        label: "Stata code",
+        detail: "Full replication do-file",
+        href: "/research/renewable-energy-growth-stata.do",
+        icon: Terminal,
+      },
+      {
+        label: "Dataset",
+        detail: "XLSX · World Bank WDI panel",
+        href: "/research/renewable-energy-growth-dataset.xlsx",
+        icon: Sheet,
+      },
+    ],
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /* CV Highlights                                                       */
 /* ------------------------------------------------------------------ */
 
@@ -542,6 +642,7 @@ export const navLinks = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "research", label: "Research" },
   { id: "ventures", label: "Ventures" },
   { id: "cv", label: "CV" },
   { id: "contact", label: "Contact" },
