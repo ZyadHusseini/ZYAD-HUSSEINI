@@ -50,6 +50,20 @@ business intelligence, financial analysis, market research.
 
 ## Research
 
+### Predicting In-Game Spending Behaviour Using Machine Learning (MSc thesis, 2026)
+
+MSc Data Analytics for Business, Department of Data Analytics, Kedge Business School.
+Supervised by Dr. Tianyuan Zhang.
+
+- Question: which player behaviours and engagement patterns best predict in-game spending, and how can those predictors be interpreted through economic and behavioural theories of consumer choice?
+- Data: five public datasets covering more than 50,000 players and 52,000 games (mobile, Steam and Roblox catalogues).
+- Methods: interpretable logistic regression baseline, a thirteen-model classification benchmark, random forests, k-means segmentation, natural language processing, deep learning, Lorenz curves and Gini coefficients, cross-validation, class-imbalance handling.
+- Finding: engagement and demographic features showed no robust association with spending — all thirteen classifiers performed at chance (ROC AUC 0.48–0.52) and no feature passed conventional significance tests. The structural patterns theory predicts were nonetheless clear: revenue Gini of 0.87, with the top 1% of payers generating 39% of revenue, and a playtime Gini of 0.83.
+- Control: the same pipeline applied to two genuine game-level catalogues reached 0.95 ROC AUC and recovered the freemium signal from game descriptions alone via NLP.
+- Interpretation: the behavioural signal is absent from synthetic and coarse public data rather than from the phenomenon itself, so credible prediction of individual spending requires real player-level telemetry — with direct implications for the ethics of behaviour-based monetisation.
+- Thesis: https://www.zyadhusseini.com/research/Zyad-Husseini-MSc-Thesis-Predicting-In-Game-Spending.docx
+- Proposal: https://www.zyadhusseini.com/research/Zyad-Husseini-MSc-Thesis-Proposal.pdf
+
 ### The Impact of Renewable Energy Adoption on Economic Growth (2025)
 
 Econometrics research paper, Department of Economics, School of Business,

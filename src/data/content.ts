@@ -508,6 +508,54 @@ export interface ResearchPaper {
 
 export const researchPapers: ResearchPaper[] = [
   {
+    title:
+      "Predicting In-Game Spending Behaviour Using Machine Learning: An Economic and Behavioural Analysis",
+    type: "MSc Thesis",
+    institution: "Kedge Business School",
+    department: "MSc Data Analytics for Business, Department of Data Analytics",
+    course: "Academic year 2025/2026",
+    supervisor: "Dr. Tianyuan Zhang",
+    year: "2026",
+    abstract:
+      "Games now earn from microtransactions rather than boxed sales, and spending is extraordinarily concentrated — most players never pay, while a small minority generates almost all revenue. This thesis asks which behaviours predict in-game spending, and how those predictors read against economic and behavioural theories of consumer choice. It pairs an interpretable logistic baseline with a family of machine-learning models, unsupervised segmentation and NLP across five public datasets covering more than 50,000 players and 52,000 games.",
+    question:
+      "Which player behaviours and engagement patterns best predict in-game spending, and how can these predictors be interpreted using economic and behavioural theories of consumer choice?",
+    data: "5 public datasets · 50,000+ players · 52,000+ games · mobile, Steam and Roblox catalogues",
+    findings: [
+      { value: "0.48–0.52", label: "ROC AUC — all 13 classifiers sat at chance on the public player data" },
+      { value: "0.95", label: "ROC AUC — the same pipeline on genuine game-level data" },
+      { value: "0.87", label: "Gini of revenue: the top 1% of payers generate 39% of it" },
+    ],
+    methods: [
+      "Logistic regression",
+      "13-model benchmark",
+      "Random forest",
+      "k-means segmentation",
+      "NLP",
+      "Deep learning",
+      "Lorenz / Gini",
+      "Cross-validation",
+      "Class imbalance",
+      "ROC AUC",
+    ],
+    conclusion:
+      "The headline result is a null one, and the thesis treats it as a finding rather than a failure. Engagement and demographic features carried no reliable signal about who spends — yet the structural patterns theory predicts were plainly there: revenue and playtime were both extremely concentrated. A control analysis on two genuine game-level catalogues settles the ambiguity: the identical pipeline reaches 0.95 AUC and recovers the freemium signal from game descriptions alone. The divergence is the argument — the behavioural signal is absent from synthetic and coarse public data, not from the phenomenon, so credible prediction of individual spending requires real player-level telemetry. That conclusion carries directly into the ethics of behaviour-based monetisation.",
+    assets: [
+      {
+        label: "Read the thesis",
+        detail: "DOCX · ~18,000 words",
+        href: "/research/Zyad-Husseini-MSc-Thesis-Predicting-In-Game-Spending.docx",
+        icon: FileType,
+      },
+      {
+        label: "Thesis proposal",
+        detail: "PDF",
+        href: "/research/Zyad-Husseini-MSc-Thesis-Proposal.pdf",
+        icon: FileText,
+      },
+    ],
+  },
+  {
     title: "The Impact of Renewable Energy Adoption on Economic Growth",
     type: "Econometrics Research Paper",
     institution: "The American University in Cairo",
