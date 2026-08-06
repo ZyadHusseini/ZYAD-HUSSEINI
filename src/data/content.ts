@@ -276,17 +276,18 @@ export const projects: Project[] = [
     title: "Nasdaq 100 Analysis",
     category: "analytics",
     year: "2025",
-    description: "Analysis of Nasdaq 100 performance, trends, and market dynamics.",
-    tools: ["Data Analysis", "Financial Modeling", "Python"],
+    description:
+      "Sector-by-sector descriptive statistics across all 100 Nasdaq constituents. Three-person team project.",
+    tools: ["Descriptive Statistics", "Financial Analysis", "Excel"],
     icon: CandlestickChart,
     gradient: "from-indigo-400 to-violet-500",
     caseStudy: {
       problem:
-        "The Nasdaq 100 moves fast and is dominated by a handful of mega-caps — separating real trends from noise takes structured analysis, not headlines.",
+        "The Nasdaq 100 is dominated by a handful of mega-caps, so index-level headlines say little about what is actually happening underneath. Comparing individual stocks against the index needs structured, like-for-like statistics.",
       approach:
-        "Pulled historical index data into Python, analyzed performance across time horizons, decomposed trends and volatility, and built financial models to frame market dynamics and concentration risk.",
+        "Built a per-ticker dataset covering all 100 constituents and organised the analysis by sector — information technology, consumer services and discretionary, staples, health care, industrials, utilities, energy and financial services — so each sector's risk and return characteristics could be compared on the same basis.",
       outcome:
-        "A data-backed read on index behavior and its drivers, sharpening the financial-modeling toolkit I now use in investment analysis work.",
+        "A sector-structured read on where the index's performance and volatility actually come from. Submitted for ECON 404101 at The American University in Cairo under Dr. Mohamed Bouaddi, co-authored with two classmates.",
     },
   },
   {
@@ -358,20 +359,21 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Marketing Strategy Report",
+    title: "Elevate — Marketing Plan",
     category: "research",
     year: "2025",
-    description: "Strategy analysis and recommendations for business growth.",
-    tools: ["Market Research", "Strategy", "Analysis"],
+    description:
+      "Full marketing plan and progress report for the Elevate brand. Six-person team project.",
+    tools: ["Market Research", "Segmentation", "Positioning", "Strategy"],
     icon: Megaphone,
     gradient: "from-rose-400 to-pink-500",
     caseStudy: {
       problem:
-        "Growth had plateaued and the business needed a clear-eyed view of its market position before committing budget to new channels.",
+        "Elevate needed a marketing plan grounded in evidence rather than instinct — who the customer actually is, where the brand sits against competitors, and which moves deserve budget first.",
       approach:
-        "Ran structured market research — competitors, segments, positioning — and synthesized the findings into a strategy report with prioritized, actionable recommendations.",
+        "Worked as part of a six-person team on structured market research covering competitors, segments and positioning, then synthesised it into a written plan with prioritised recommendations.",
       outcome:
-        "A concrete growth roadmap the business could execute against, grounded in evidence rather than instinct.",
+        "A complete marketing plan and progress report submitted for MKTG 2101 at The American University in Cairo under Dr. Hend Abou Ghaly.",
     },
   },
   {

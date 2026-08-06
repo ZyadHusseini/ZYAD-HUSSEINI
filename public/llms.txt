@@ -81,12 +81,12 @@ The American University in Cairo (ECON 408101, supervised by Dr. Mina Ayad).
 ## Selected projects
 
 - Renewable Energy & Economic Growth (2025) — see the Research section above.
-- Nasdaq 100 Analysis (2025) — index performance, trends and market dynamics in Python.
+- Nasdaq 100 Analysis (2025) — sector-by-sector descriptive statistics across all 100 constituents. Three-person team project, ECON 404101, The American University in Cairo.
 - Power BI Dashboards, EFG Hermes (2025) — financial data visualization.
 - ERP Cash Flow Integration, AR CORP (2025) — live cash-flow reporting in Power BI.
 - Job Application Tracker (2025) — Python and database automation.
 - Python Financial Tracker (2025) — personal finance app with data visualization.
-- Marketing Strategy Report (2025) — market research and growth recommendations.
+- Elevate Marketing Plan (2025) — market research, segmentation, positioning and prioritised recommendations. Six-person team project, MKTG 2101, The American University in Cairo.
 - C++ Game Development (2022) — object-oriented game built from scratch.
 
 ## Recognition
