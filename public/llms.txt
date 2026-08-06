@@ -80,6 +80,9 @@ The American University in Cairo (ECON 408101, supervised by Dr. Mina Ayad).
 
 ## Selected projects
 
+- L'Oréal Hackathon — Sustainable Skin-Condition Classification (2026). Multi-label NLP classifying skin conditions from beauty product descriptions across 6,240 LLM-labelled products, judged on CO₂ emissions and model size as well as F1. Labels were split into "strong" (stated in the copy) and "weak" (inferred), each with its own model. A fine-tuned Longformer scored 0.688 micro-F1 at 113.8 g CO₂ and 3.5 hours on a Tesla T4; a lightweight TF-IDF/LightGBM pipeline reached 0.638 micro-F1 (0.77 on strong labels) for 0.05 g — roughly 2,000× less carbon for ~93% of the performance. Presented at L'Oréal headquarters in Paris. Five-person team, Machine Learning 2, Kedge Business School.
+- LSTM Product Classifier (2026) — PyTorch LSTM predicting e-commerce product category from page text; tokenisation, embeddings, training with checkpointing, and inference on unseen listings. Solo coursework, Kedge Business School.
+
 - Renewable Energy & Economic Growth (2025) — see the Research section above.
 - Nasdaq 100 Analysis (2025) — sector-by-sector descriptive statistics across all 100 constituents. Three-person team project, ECON 404101, The American University in Cairo.
 - Power BI Dashboards, EFG Hermes (2025) — financial data visualization.

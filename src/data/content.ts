@@ -25,6 +25,7 @@ import {
   PenTool,
   Sheet,
   Sigma,
+  Sparkles,
   Store,
   Terminal,
   Trophy,
@@ -254,6 +255,42 @@ export const projectFilters = [
 ] as const;
 
 export const projects: Project[] = [
+  {
+    title: "L'Oréal Hackathon — Sustainable Skin-Condition Classification",
+    category: "analytics",
+    year: "2026",
+    description:
+      "Multi-label NLP model classifying skin conditions from beauty product descriptions, judged on carbon cost as well as accuracy. Presented at L'Oréal HQ in Paris.",
+    tools: ["Python", "PyTorch", "Transformers", "LightGBM", "CodeCarbon"],
+    icon: Sparkles,
+    gradient: "from-pink-400 to-rose-500",
+    caseStudy: {
+      problem:
+        "L'Oréal set a hackathon with an unusual scoring rule: classify skin conditions from beauty product descriptions, but be judged on model size and CO₂ emissions alongside F1. Chasing accuracy alone would lose. The data made it harder — 6,240 LLM-labelled products, dozens of binary labels at once, and severe class imbalance where some labels appeared only a handful of times.",
+      approach:
+        "Rather than treat every label the same, I split them by how much signal the text actually carried: 'strong' labels stated in the copy (acne, wrinkles, eye contour, SPF) versus 'weak' inferred ones (age bracket, gender, sensitivity). Each got its own model. Then I benchmarked a lightweight TF-IDF and LightGBM pipeline against sentence-transformer embeddings and a fine-tuned Longformer, tuning per-label decision thresholds and instrumenting every run with CodeCarbon so the carbon cost was measured, not estimated.",
+      outcome:
+        "The Longformer scored highest at 0.688 micro-F1, but took 3.5 hours on a Tesla T4 and emitted 113.8 g of CO₂. The lightweight pipeline reached 0.638 micro-F1 — about 93% of the performance — for 0.05 g, roughly 2,000× less carbon. On strong labels alone it hit 0.77 F1. That trade-off was the argument we took to L'Oréal's Paris headquarters: for production deployment, near-parity at a thousandth of the footprint is the better engineering decision. Built with a five-person team.",
+    },
+  },
+  {
+    title: "LSTM Product Classifier",
+    category: "development",
+    year: "2026",
+    description:
+      "PyTorch LSTM classifying e-commerce products from their page text — tokenisation and embeddings through to inference on unseen listings.",
+    tools: ["PyTorch", "LSTM", "NLTK", "NLP"],
+    icon: Braces,
+    gradient: "from-violet-400 to-purple-500",
+    caseStudy: {
+      problem:
+        "Product pages are messy free text — title and description mixing marketing language with specifications — and the task was to infer a product's category from that text alone, without any structured fields to lean on.",
+      approach:
+        "Built the pipeline end to end in PyTorch: cleaning and tokenising the corpus, constructing the vocabulary, padding sequences, and defining an LSTM classifier with an embedding layer and dropout. Trained with Adam, checkpointing on validation performance, then reloaded the best checkpoint for evaluation and wrote a prediction function to run it against product text it had never seen.",
+      outcome:
+        "A working text classifier and a concrete grasp of how recurrent architectures handle variable-length language — the sequence-modelling groundwork that fed directly into the transformer work on the L'Oréal hackathon.",
+    },
+  },
   {
     title: "Renewable Energy & Economic Growth",
     category: "research",
