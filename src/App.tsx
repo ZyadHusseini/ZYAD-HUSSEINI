@@ -12,6 +12,7 @@ import ResearchSection from "./components/ResearchSection";
 import VenturesSection from "./components/VenturesSection";
 import CVHighlights from "./components/CVHighlights";
 import ContactSection from "./components/ContactSection";
+import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import CommandPalette from "./components/CommandPalette";
 import { ToastProvider } from "./components/Toast";
@@ -43,6 +44,7 @@ export default function App() {
           <ResearchSection />
           <VenturesSection />
           <CVHighlights />
+          <FaqSection />
           <ContactSection />
         </main>
         <Footer />

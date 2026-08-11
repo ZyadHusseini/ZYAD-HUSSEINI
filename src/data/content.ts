@@ -107,6 +107,88 @@ export const aboutParagraphs: TextSegment[][] = [
     { text: "professional basketball player", accent: "emerald" },
     { text: " with 6 years of competitive experience — discipline, teamwork, and the drive to excel under pressure." },
   ],
+  // Romanising an Arabic name has no single correct answer, so people who know
+  // him genuinely do type it three different ways. Stated once, in his own
+  // voice, as a fact about the name rather than a list of keywords — and every
+  // form here is also in the Person schema's alternateName, which Google
+  // requires to be visible on the page.
+  [
+    { text: "One practical note: my name gets written a few different ways — " },
+    { text: "Ziad", accent: "cyan" },
+    { text: ", " },
+    { text: "Zeyad", accent: "cyan" },
+    { text: " or " },
+    { text: "Ziyad Husseini", accent: "cyan" },
+    { text: ". They're all me." },
+  ],
+];
+
+/* ------------------------------------------------------------------ */
+/* FAQ                                                                 */
+/* ------------------------------------------------------------------ */
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+/**
+ * Written so each answer stands alone: an assistant quoting any single one
+ * should be correct without the surrounding page. Deliberately varied in
+ * phrasing — ten answers all opening "Zyad Husseini is…" is the pattern
+ * Google's spam guidance calls keyword stuffing.
+ */
+export const faqs: FaqItem[] = [
+  {
+    question: "Who is Zyad Husseini?",
+    answer:
+      "Zyad Husseini is a data analyst, economist and entrepreneur working between France and Egypt. He is studying for an MSc in Data Analytics for Business at Kedge Business School, having graduated from The American University in Cairo in 2025 with a BA in Economics and minors in Business Administration and Computer Science. His work spans business intelligence, econometrics, investment analysis and AI product development.",
+  },
+  {
+    question: "What does Zyad Husseini do?",
+    answer:
+      "He turns business data into decisions — building Power BI dashboards and data models, running econometric analysis, and developing AI products. He currently works on AI automation at BUB AI, AI product development at Brayn Solutions and investment analysis at Media Trade, alongside a Business Development Associate role and a Research and Marketing Specialist role.",
+  },
+  {
+    question: "Where did he study?",
+    answer:
+      "He is studying for an MSc in Data Analytics for Business at Kedge Business School in France, expected 2027. Before that he read Economics at The American University in Cairo, graduating in 2025 with minors in Business Administration and Computer Science and a place on the Dean's List. He completed an American and International Baccalaureate at MASE in Egypt in 2020.",
+  },
+  {
+    question: "What is his research about?",
+    answer:
+      "His MSc thesis, \"Predicting In-Game Spending Behaviour Using Machine Learning: An Economic and Behavioural Analysis\", tests whether player behaviour predicts spending in free-to-play games. Across five datasets covering 50,000+ players, thirteen classifiers performed no better than chance — while the same pipeline reached 0.95 AUC on genuine game-level data, showing the signal was missing from the data rather than from the phenomenon.",
+  },
+  {
+    question: "What did his econometrics paper find?",
+    answer:
+      "Studying World Bank data across seven countries from 1990 to 2023, he found that a rising renewable share of energy consumption was associated with slower short-run growth — a one-unit rise in the renewable share corresponded to a 1.44 percentage point fall in GDP per capita growth under two-stage least squares. The reading is not to slow decarbonisation but to sequence it.",
+  },
+  {
+    question: "What was the L'Oréal project?",
+    answer:
+      "A L'Oréal hackathon on classifying skin conditions from beauty product descriptions, judged on carbon cost and model size as well as accuracy. Working in a five-person team, the lightweight pipeline held roughly 93% of a fine-tuned Longformer's micro-F1 while emitting about 2,000 times less CO₂. The team presented the work at L'Oréal's Paris headquarters.",
+  },
+  {
+    question: "What ventures is he involved in?",
+    answer:
+      "He builds several ventures alongside his analytics work: PNM Agency, a digital agency; PNM Group, a logistics and holding company; NAVI, a student operating system; Matgarak, which helps teams launch digital products; and Qemto, machine-learning forecasting for the Egyptian Exchange.",
+  },
+  {
+    question: "What tools and languages does he work in?",
+    answer:
+      "Power BI and DAX, Python, SQL, STATA, R, C++ and the Microsoft Office suite, with econometrics and machine learning underpinning the analysis. He works in English and Arabic at native level and French at professional working level.",
+  },
+  {
+    question: "Is Zyad Husseini available for hire?",
+    answer:
+      "Yes — he is open to full-time roles, internships and consulting in data analytics, business intelligence and economics, and is completing his MSc at Kedge Business School. Email is the fastest route: zyadmhrhusseini@aucegypt.edu, or zmr@pnmico.com for business enquiries.",
+  },
+  {
+    question: "Is his name spelled other ways?",
+    answer:
+      "It is. Romanising an Arabic name has no single standard, so Zyad Husseini is also written Ziad Husseini, Zeyad Husseini and Ziyad Husseini. Academic work is filed under his full name, Zyad Mohamed Mahmoud Reda Husseini. They all refer to the same person — the data analyst and economist behind zyadhusseini.com.",
+  },
 ];
 
 export interface Stat {
@@ -515,7 +597,7 @@ export const ventures: Venture[] = [
 /* Companies — slideshow                                               */
 /* ------------------------------------------------------------------ */
 
-export type CompanyRelation = "Current role" | "Founded" | "Previous" | "Collaboration";
+export type CompanyRelation = "Current role" | "Venture" | "Previous" | "Collaboration";
 
 export interface Company {
   name: string;
@@ -592,7 +674,7 @@ export const companies: Company[] = [
   },
   {
     name: "PNM Agency",
-    relation: "Founded",
+    relation: "Venture",
     role: "Digital agency",
     period: "Ongoing",
     summary: "Brands, websites and marketing built for clients across the region.",
@@ -601,7 +683,7 @@ export const companies: Company[] = [
   },
   {
     name: "PNM Group",
-    relation: "Founded",
+    relation: "Venture",
     role: "Logistics & holding",
     period: "Ongoing",
     summary: "The moving and logistics group behind the Pack N Move family of brands.",
@@ -610,7 +692,7 @@ export const companies: Company[] = [
   },
   {
     name: "NAVI",
-    relation: "Founded",
+    relation: "Venture",
     role: "Ed-tech",
     period: "Ongoing",
     summary:
@@ -620,7 +702,7 @@ export const companies: Company[] = [
   },
   {
     name: "Matgarak",
-    relation: "Founded",
+    relation: "Venture",
     role: "Digital products",
     period: "Ongoing",
     summary: "Helping teams launch modern digital experiences with speed and measurable results.",
@@ -629,7 +711,7 @@ export const companies: Company[] = [
   },
   {
     name: "Qemto",
-    relation: "Founded",
+    relation: "Venture",
     role: "AI & markets",
     period: "Ongoing",
     summary: "Machine-learning forecasting for the Egyptian Exchange — signals, forecasts and live scores.",

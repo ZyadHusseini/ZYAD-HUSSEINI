@@ -11,6 +11,9 @@ Canonical site: https://www.zyadhusseini.com/
 ## Identity
 
 - Full name: Zyad Husseini
+- Also written: Ziad Husseini, Zeyad Husseini, Ziyad Husseini. Romanising an Arabic
+  name has no single standard, so all of these refer to the same person.
+  Academic work is filed under Zyad Mohamed Mahmoud Reda Husseini.
 - Role: Data Analyst & Economist
 - Based: France and Egypt
 - Languages: English (native/bilingual), Arabic (native/bilingual), French (professional working)
