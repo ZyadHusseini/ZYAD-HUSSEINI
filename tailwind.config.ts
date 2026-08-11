@@ -23,6 +23,12 @@ export default {
         mono: ["'JetBrains Mono Variable'", "'JetBrains Mono'", "ui-monospace", "monospace"],
       },
       keyframes: {
+        // Exactly -50% because the logo list is rendered twice: the second copy
+        // arrives where the first began, so the reset is invisible.
+        marquee: {
+          from: { transform: "translate3d(0, 0, 0)" },
+          to: { transform: "translate3d(-50%, 0, 0)" },
+        },
         "drift-a": {
           "0%, 100%": { transform: "translate3d(0, 0, 0)" },
           "50%": { transform: "translate3d(40px, -30px, 0)" },
@@ -45,6 +51,7 @@ export default {
         },
       },
       animation: {
+        marquee: "marquee 45s linear infinite",
         "drift-a": "drift-a 12s ease-in-out infinite",
         "drift-b": "drift-b 15s ease-in-out infinite",
         "drift-c": "drift-c 10s ease-in-out infinite",

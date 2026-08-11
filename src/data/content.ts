@@ -608,6 +608,12 @@ export interface Company {
   summary: string;
   highlights: string[];
   url?: string;
+  /**
+   * Path under /logos. Optional on purpose: only six of the twelve marks were
+   * available to source, so the logo strip falls back to a wordmark rather than
+   * shipping a gap or an invented asset. Drop a file in and add the path here.
+   */
+  logo?: string;
 }
 
 /** Newest and most significant first — this is the order the slideshow plays in. */
@@ -665,6 +671,7 @@ export const companies: Company[] = [
   },
   {
     name: "Pack N Move",
+    logo: "/logos/pack-n-move.png",
     relation: "Previous",
     role: "Data Analytics · Marketing · Accounting",
     period: "2019 — 2025",
@@ -674,6 +681,7 @@ export const companies: Company[] = [
   },
   {
     name: "PNM Agency",
+    logo: "/logos/pnm-agency.png",
     relation: "Venture",
     role: "Digital agency",
     period: "Ongoing",
@@ -683,6 +691,7 @@ export const companies: Company[] = [
   },
   {
     name: "PNM Group",
+    logo: "/logos/pnm-group.png",
     relation: "Venture",
     role: "Logistics & holding",
     period: "Ongoing",
@@ -692,6 +701,7 @@ export const companies: Company[] = [
   },
   {
     name: "NAVI",
+    logo: "/logos/navi.png",
     relation: "Venture",
     role: "Ed-tech",
     period: "Ongoing",

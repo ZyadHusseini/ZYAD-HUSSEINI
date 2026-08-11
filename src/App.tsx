@@ -4,6 +4,7 @@ import IntroAnimation from "./components/IntroAnimation";
 import CustomCursor from "./components/CustomCursor";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
+import LogoMarquee from "./components/LogoMarquee";
 import AboutSection from "./components/AboutSection";
 import CompaniesSlideshow from "./components/CompaniesSlideshow";
 import ExperienceSection from "./components/ExperienceSection";
@@ -39,6 +40,7 @@ export default function App() {
           <HeroSection started={introDone} />
           <AboutSection />
           <CompaniesSlideshow />
+          <LogoMarquee />
           <ExperienceSection />
           <ProjectsSection />
           <ResearchSection />
