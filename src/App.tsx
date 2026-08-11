@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
+import CompaniesSlideshow from "./components/CompaniesSlideshow";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ResearchSection from "./components/ResearchSection";
@@ -36,6 +37,7 @@ export default function App() {
         <main id="main">
           <HeroSection started={introDone} />
           <AboutSection />
+          <CompaniesSlideshow />
           <ExperienceSection />
           <ProjectsSection />
           <ResearchSection />

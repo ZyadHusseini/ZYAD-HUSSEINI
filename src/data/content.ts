@@ -512,6 +512,133 @@ export const ventures: Venture[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* Companies — slideshow                                               */
+/* ------------------------------------------------------------------ */
+
+export type CompanyRelation = "Current role" | "Founded" | "Previous" | "Collaboration";
+
+export interface Company {
+  name: string;
+  relation: CompanyRelation;
+  role: string;
+  period: string;
+  /** One line on what the work actually was. */
+  summary: string;
+  highlights: string[];
+  url?: string;
+}
+
+/** Newest and most significant first — this is the order the slideshow plays in. */
+export const companies: Company[] = [
+  {
+    name: "L'Oréal",
+    relation: "Collaboration",
+    role: "Hackathon — Sustainable ML",
+    period: "2026",
+    summary:
+      "Built a multi-label model classifying skin conditions from product descriptions, judged on carbon cost as well as accuracy, and presented it at L'Oréal's Paris headquarters.",
+    highlights: ["6,240 products", "~2,000× less CO₂", "Presented in Paris"],
+  },
+  {
+    name: "Brayn Solutions",
+    relation: "Current role",
+    role: "AI Product Development & Website Creation",
+    period: "Dec 2025 — present",
+    summary: "Developing AI-powered products and building web solutions for clients.",
+    highlights: ["AI/ML", "Web development", "Product management"],
+  },
+  {
+    name: "Media Trade",
+    relation: "Current role",
+    role: "Investment Analyst",
+    period: "Dec 2025 — present",
+    summary: "Analysing investment opportunities and producing the financial reads behind them.",
+    highlights: ["Financial analysis", "Investment research", "Risk assessment"],
+  },
+  {
+    name: "BUB AI",
+    relation: "Current role",
+    role: "AI Automation & Workflows Specialist",
+    period: "Oct 2025 — present",
+    summary: "Designing and shipping AI automation workflows that take manual steps out of business processes.",
+    highlights: ["AI automation", "Workflow design", "Process optimisation"],
+  },
+  {
+    name: "EFG Hermes",
+    relation: "Previous",
+    role: "Data Analytics Intern",
+    period: "Aug — Sep 2025",
+    summary:
+      "Built Power BI dashboards for financial data visualisation inside one of MENA's leading investment banks.",
+    highlights: ["Power BI", "DAX", "Financial analytics"],
+  },
+  {
+    name: "AR CORP",
+    relation: "Previous",
+    role: "Data Analytics",
+    period: "Jan — Jun 2025",
+    summary:
+      "Connected a cash-flow statement directly to the ERP system in Power BI, replacing a manual monthly reporting cycle with a live report.",
+    highlights: ["ERP integration", "Power BI", "Business intelligence"],
+  },
+  {
+    name: "Pack N Move",
+    relation: "Previous",
+    role: "Data Analytics · Marketing · Accounting",
+    period: "2019 — 2025",
+    summary:
+      "Six years across three roles — starting in accounts, moving through marketing across the Gulf, and returning to build business-intelligence dashboards.",
+    highlights: ["BI dashboards", "Gulf market marketing", "Accounting"],
+  },
+  {
+    name: "PNM Agency",
+    relation: "Founded",
+    role: "Digital agency",
+    period: "Ongoing",
+    summary: "Brands, websites and marketing built for clients across the region.",
+    highlights: ["Branding", "Web", "Marketing"],
+    url: "https://pnmagency.com",
+  },
+  {
+    name: "PNM Group",
+    relation: "Founded",
+    role: "Logistics & holding",
+    period: "Ongoing",
+    summary: "The moving and logistics group behind the Pack N Move family of brands.",
+    highlights: ["Logistics", "Egypt & Gulf", "Holding"],
+    url: "https://pnmholding.com",
+  },
+  {
+    name: "NAVI",
+    relation: "Founded",
+    role: "Ed-tech",
+    period: "Ongoing",
+    summary:
+      "A student operating system — courses, notes, schedules, study groups and AI tools in one command centre.",
+    highlights: ["Ed-tech", "AI tools", "Product"],
+    url: "https://navi.geo-ed.tech/landing",
+  },
+  {
+    name: "Matgarak",
+    relation: "Founded",
+    role: "Digital products",
+    period: "Ongoing",
+    summary: "Helping teams launch modern digital experiences with speed and measurable results.",
+    highlights: ["Digital products", "Launch", "Growth"],
+    url: "https://matgarak.com",
+  },
+  {
+    name: "Qemto",
+    relation: "Founded",
+    role: "AI & markets",
+    period: "Ongoing",
+    summary: "Machine-learning forecasting for the Egyptian Exchange — signals, forecasts and live scores.",
+    highlights: ["Machine learning", "EGX", "Forecasting"],
+    url: "https://kemto-egx.vercel.app",
+  },
+];
+
+/* ------------------------------------------------------------------ */
 /* Research                                                            */
 /* ------------------------------------------------------------------ */
 
@@ -727,6 +854,7 @@ export const languages: Language[] = [
 
 export const navLinks = [
   { id: "about", label: "About" },
+  { id: "companies", label: "Companies" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "research", label: "Research" },
