@@ -1,6 +1,15 @@
 # SEO — status and what's left
 
-Audit date: 5 Aug 2026. Canonical host: `https://www.zyadhusseini.com/`
+Audit date: 5 Aug 2026, updated 12 Aug 2026. Canonical host: `https://www.zyadhusseini.com/`
+
+## Submission & discovery (12 Aug)
+
+| Channel | State |
+|---|---|
+| IndexNow (Bing / Yandex / Seznam / Naver → ChatGPT search, Copilot) | **Live.** Key file at `/20f1b0218a548453af857dd0b50876a1.txt`, postbuild ping on every Vercel deploy (same pattern as the PNM sites), first manual ping accepted (202) |
+| GitHub entity signals | **Live.** Profile README at github.com/ZyadHusseini linking the site; ZYAD-HUSSEINI repo public with homepage + description set |
+| Google crawl discovery | Depends on links from indexed pages (GitHub now provides two) and on Search Console — see below |
+| Bing index check (12 Aug) | 0 pages — expected, ping just submitted |
 
 ## Done (in the repo, deployed)
 
@@ -19,7 +28,15 @@ Audit date: 5 Aug 2026. Canonical host: `https://www.zyadhusseini.com/`
 | Fonts | Self-hosted (Inter + JetBrains Mono variable), no third-party render-blocking request |
 | CWV | TTFB ~290ms, CLS 0, ~135KB transfer |
 
-## Blocked on Zyad
+## Blocked on Zyad (each is minutes, ordered by impact)
+
+0. **Five-minute link fixes.**
+   - Linktree still points the "Portfolio" link at the old `zyadmhr.atoms.world` — swap it to `https://www.zyadhusseini.com`. Linktree is already indexed by Google; this is a live crawl path.
+   - LinkedIn profile website field → `https://www.zyadhusseini.com`.
+   - GitHub profile fields (name/website/bio) are still empty — the token here lacks the
+     `user` scope. Either run `gh auth refresh -h github.com -s user` and ask Claude to
+     finish, or fill them at github.com/settings/profile (30 seconds). The profile README
+     already renders regardless.
 
 ### 1. The profile photo — this is the one that matters
 
