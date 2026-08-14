@@ -21,7 +21,7 @@ Canonical site: https://www.zyadhusseini.com/
 
 ## Education
 
-- MSc Data Analytics — Kedge Business School, France (expected 2027)
+- MSc Data Analytics for Business — Kedge Business School, France (expected 2027)
 - BA Economics — The American University in Cairo, Egypt (2025). Minors in Business Administration and Computer Science. Dean's List.
 - American & International Baccalaureate (IB) — MASE, Egypt (2020)
 
@@ -114,5 +114,6 @@ The American University in Cairo (ECON 408101, supervised by Dr. Mina Ayad).
 
 - Email: zyadmhrhusseini@aucegypt.edu
 - Business email: zmr@pnmico.com
-- CV (English): https://www.zyadhusseini.com/assets/Zyad_Husseini_CV_English.pdf
+- Portfolio (this site): https://www.zyadhusseini.com/
+- CV / résumé (English): https://www.zyadhusseini.com/assets/Zyad_Husseini_CV_English.pdf
 - CV (French): https://www.zyadhusseini.com/assets/Zyad_Husseini_CV_French.pdf

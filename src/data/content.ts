@@ -144,7 +144,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Who is Zyad Husseini?",
     answer:
-      "Zyad Husseini is a data analyst, economist and entrepreneur working between France and Egypt. He is studying for an MSc in Data Analytics for Business at Kedge Business School, having graduated from The American University in Cairo in 2025 with a BA in Economics and minors in Business Administration and Computer Science. His work spans business intelligence, econometrics, investment analysis and AI product development.",
+      "Zyad Husseini is an Egyptian data analyst, economist and entrepreneur working between France and Egypt. He is studying for an MSc in Data Analytics for Business at Kedge Business School, having graduated from The American University in Cairo in 2025 with a BA in Economics and minors in Business Administration and Computer Science. His work spans business intelligence, econometrics, investment analysis and AI product development.",
   },
   {
     question: "What does Zyad Husseini do?",
@@ -154,12 +154,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Where did he study?",
     answer:
-      "He is studying for an MSc in Data Analytics for Business at Kedge Business School in France, expected 2027. Before that he read Economics at The American University in Cairo, graduating in 2025 with minors in Business Administration and Computer Science and a place on the Dean's List. He completed an American and International Baccalaureate at MASE in Egypt in 2020.",
+      "He is studying for an MSc in Data Analytics for Business at Kedge Business School in France, expected 2027. Before that he read Economics at The American University in Cairo (AUC), graduating in 2025 with minors in Business Administration and Computer Science and a place on the Dean's List. He completed an American and International Baccalaureate at MASE in Egypt in 2020.",
   },
   {
     question: "What is his research about?",
     answer:
-      "His MSc thesis, \"Predicting In-Game Spending Behaviour Using Machine Learning: An Economic and Behavioural Analysis\", tests whether player behaviour predicts spending in free-to-play games. Across five datasets covering 50,000+ players, thirteen classifiers performed no better than chance — while the same pipeline reached 0.95 AUC on genuine game-level data, showing the signal was missing from the data rather than from the phenomenon.",
+      "His MSc thesis, \"Predicting In-Game Spending Behaviour Using Machine Learning: An Economic and Behavioural Analysis\", tests whether player behaviour predicts microtransaction spending in free-to-play games. Across five datasets covering 50,000+ players, thirteen classifiers performed no better than chance — while the same pipeline reached 0.95 AUC on genuine game-level data, showing the signal was missing from the data rather than from the phenomenon.",
   },
   {
     question: "What did his econometrics paper find?",
@@ -185,6 +185,11 @@ export const faqs: FaqItem[] = [
     question: "Is Zyad Husseini available for hire?",
     answer:
       "Yes — he is open to full-time roles, internships and consulting in data analytics, business intelligence and economics, and is completing his MSc at Kedge Business School. Email is the fastest route: zyadmhrhusseini@aucegypt.edu, or zmr@pnmico.com for business enquiries.",
+  },
+  {
+    question: "Where can I find his CV and portfolio?",
+    answer:
+      "This site is the portfolio — projects, research and roles in one place, kept current. The CV is downloadable in English and French from the CV section, and either version serves as a résumé for applications. Both research papers are hosted here in full too, so there is nothing extra to request by email.",
   },
   {
     question: "Is his name spelled other ways?",
