@@ -45,8 +45,8 @@ business intelligence, financial analysis, market research.
 
 ## Ventures
 
-- PNM Agency — digital agency: https://pnmagency.com
-- PNM Group — logistics and holding company: https://pnmholding.com
+- PNM Agency — digital agency: https://www.pnmagency.com
+- PNM Group — logistics and holding company: https://www.pnmholding.com
 - NAVI — student operating system (ed-tech): https://navi.geo-ed.tech/landing
 - Matgarak — digital products: https://matgarak.com
 - Qemto — machine-learning market forecasting for the Egyptian Exchange: https://kemto-egx.vercel.app

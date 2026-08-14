@@ -49,7 +49,9 @@ export const identity = {
   /** Company-domain address published on the Linktree. */
   businessEmail: "zmr@pnmico.com",
   phones: ["+33 07 68 87 98 41", "+20 100 222 4134"],
-  linkedin: "https://linkedin.com/in/zyadmhr",
+  // www + trailing slash to match the sameAs value in index.html's JSON-LD
+  // exactly and skip LinkedIn's redirect from the bare-domain form.
+  linkedin: "https://www.linkedin.com/in/zyadmhr/",
   github: "https://github.com/ZyadHusseini",
   linktree: "https://linktr.ee/zyadmhrhusseini",
   instagram: "https://www.instagram.com/Electro_zyad",
@@ -543,7 +545,8 @@ export const ventures: Venture[] = [
     name: "PNM Agency",
     category: "Digital Agency",
     description: "Digital agency crafting brands, websites, and marketing for clients across the region.",
-    url: "https://pnmagency.com",
+    // Canonical host is www (the apex 301s here) — link straight to it.
+    url: "https://www.pnmagency.com",
     displayUrl: "pnmagency.com",
     icon: PenTool,
     gradient: "from-rose-400 to-red-500",
@@ -555,7 +558,8 @@ export const ventures: Venture[] = [
     name: "PNM Group",
     category: "Logistics & Holding",
     description: "Moving and logistics group serving Egypt and the Gulf — the family of Pack N Move brands.",
-    url: "https://pnmholding.com",
+    // Canonical host is www (the apex 301s here) — link straight to it.
+    url: "https://www.pnmholding.com",
     displayUrl: "pnmholding.com",
     icon: Truck,
     gradient: "from-amber-400 to-orange-500",
@@ -614,6 +618,15 @@ export interface Company {
    * shipping a gap or an invented asset. Drop a file in and add the path here.
    */
   logo?: string;
+  /**
+   * Intrinsic pixel dimensions of the file at `logo`. Passed to the <img>'s
+   * width/height attributes in LogoMarquee so the browser can reserve the
+   * right aspect ratio before the file loads — the rendered size is still
+   * set by CSS (a fixed height, width auto), this only stops the layout
+   * shift while each logo streams in.
+   */
+  logoWidth?: number;
+  logoHeight?: number;
 }
 
 /** Newest and most significant first — this is the order the slideshow plays in. */
@@ -672,6 +685,8 @@ export const companies: Company[] = [
   {
     name: "Pack N Move",
     logo: "/logos/pack-n-move.png",
+    logoWidth: 119,
+    logoHeight: 152,
     relation: "Previous",
     role: "Data Analytics · Marketing · Accounting",
     period: "2019 — 2025",
@@ -682,26 +697,32 @@ export const companies: Company[] = [
   {
     name: "PNM Agency",
     logo: "/logos/pnm-agency.png",
+    logoWidth: 1051,
+    logoHeight: 533,
     relation: "Venture",
     role: "Digital agency",
     period: "Ongoing",
     summary: "Brands, websites and marketing built for clients across the region.",
     highlights: ["Branding", "Web", "Marketing"],
-    url: "https://pnmagency.com",
+    url: "https://www.pnmagency.com",
   },
   {
     name: "PNM Group",
     logo: "/logos/pnm-group.png",
+    logoWidth: 500,
+    logoHeight: 171,
     relation: "Venture",
     role: "Logistics & holding",
     period: "Ongoing",
     summary: "The moving and logistics group behind the Pack N Move family of brands.",
     highlights: ["Logistics", "Egypt & Gulf", "Holding"],
-    url: "https://pnmholding.com",
+    url: "https://www.pnmholding.com",
   },
   {
     name: "NAVI",
     logo: "/logos/navi.png",
+    logoWidth: 600,
+    logoHeight: 169,
     relation: "Venture",
     role: "Ed-tech",
     period: "Ongoing",

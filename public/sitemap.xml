@@ -5,7 +5,7 @@
 >
   <url>
     <loc>https://www.zyadhusseini.com/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,10 +19,21 @@
       <image:caption>Zyad Husseini, MSc Data Analytics student at Kedge Business School.</image:caption>
     </image:image>
   </url>
-  <!-- The paper is a standalone indexable document: it carries the full name,
-       institution and findings, and PDFs rank in their own right. -->
+  <!-- Both research documents below are standalone indexable documents: each
+       carries the full name, institution and findings, and Google indexes
+       PDF/DOCX content in its own right. The thesis proposal, Stata do-file
+       and raw dataset are intentionally left out — they are supplementary
+       replication material (linked from the page and still crawlable), not
+       primary content worth competing for search real estate against the
+       finished thesis and paper. -->
   <url>
     <loc>https://www.zyadhusseini.com/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.zyadhusseini.com/research/Zyad-Husseini-MSc-Thesis-Predicting-In-Game-Spending.docx</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

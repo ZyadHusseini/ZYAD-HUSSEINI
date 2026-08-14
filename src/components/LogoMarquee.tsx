@@ -55,6 +55,12 @@ export default function LogoMarquee() {
                 <img
                   src={company.logo}
                   alt={isClone ? "" : company.name}
+                  // Intrinsic size, not display size: CSS (h-9/md:h-11 + w-auto)
+                  // still controls the rendered box. These attributes just give
+                  // the browser the real aspect ratio so it can reserve space
+                  // before the file loads, instead of shifting the strip.
+                  width={company.logoWidth}
+                  height={company.logoHeight}
                   loading="lazy"
                   decoding="async"
                   // brightness-0 then invert forces every mark to flat white

@@ -18,6 +18,22 @@
     {
       "source": "/sitemap.xml",
       "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }]
+    },
+    {
+      "source": "/assets/zyad-husseini.jpg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+    },
+    {
+      "source": "/assets/og-image.jpg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+    },
+    {
+      "source": "/assets/Zyad_Husseini_CV_English.pdf",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+    },
+    {
+      "source": "/assets/Zyad_Husseini_CV_French.pdf",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
     }
   ]
 }
