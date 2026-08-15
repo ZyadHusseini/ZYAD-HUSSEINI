@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Gamepad2, Play, Swords, Trophy } from "lucide-react";
 import SectionHeading from "./SectionHeading";
@@ -9,15 +9,36 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 /**
  * Click-to-load video card.
  *
- * Until the visitor presses play there is no <video> element at all — only the
- * poster image. Three clips at ~13MB combined would otherwise dwarf the rest of
- * the page, which currently ships around 136KB, and browsers will happily start
- * fetching video metadata (or more) on their own. The poster carries real
- * width/height so nothing shifts when it loads.
+ * The element is mounted from the start but carries preload="none", so no video
+ * bytes are fetched until someone presses play — three clips at ~13MB would
+ * otherwise dwarf a page that ships around 136KB. The poster attribute fills the
+ * frame in the meantime, and the wrapper's aspect-ratio reserves the box so
+ * nothing shifts.
  */
 function ClipCard({ clip }: { clip: EsportsClip }) {
   const [playing, setPlaying] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const portrait = clip.height > clip.width;
+
+  /**
+   * Must stay synchronous: awaiting anything before play() drops out of the
+   * user-gesture context and mobile browsers reject the call.
+   */
+  const play = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    const started = video.play();
+    // Older browsers return undefined rather than a promise.
+    if (started && typeof started.catch === "function") {
+      started.catch(() => {
+        // Playback refused — surface the element's own controls so the visitor
+        // has a native affordance, and offer the file as a last resort.
+        setPlaying(true);
+        setFailed(true);
+      });
+    }
+  };
 
   return (
     <figure className="glass overflow-hidden">
@@ -25,41 +46,58 @@ function ClipCard({ clip }: { clip: EsportsClip }) {
         className="relative bg-black"
         style={{ aspectRatio: `${clip.width} / ${clip.height}` }}
       >
-        {playing ? (
-          <video
-            src={clip.src}
-            poster={clip.poster}
-            controls
-            autoPlay
-            playsInline
-            preload="metadata"
-            className="h-full w-full object-contain"
-          >
-            Your browser does not support the video tag.{" "}
-            <a href={clip.src}>Download the clip</a> instead.
-          </video>
-        ) : (
+        {/*
+          The <video> stays mounted rather than being created on click.
+
+          Mounting it in response to the tap meant the browser's autoplay
+          attempt happened after the gesture had ended, and both iOS Safari
+          and Android Chrome refuse unmuted playback that is not directly
+          user-initiated — the element appeared but never played. Calling
+          play() synchronously inside the handler keeps it inside the gesture,
+          which is permitted with sound.
+
+          preload="none" keeps the earlier behaviour of downloading nothing
+          until someone actually asks for the clip; the poster attribute is
+          what fills the frame in the meantime.
+        */}
+        <video
+          ref={videoRef}
+          src={clip.src}
+          poster={clip.poster}
+          playsInline
+          preload="none"
+          controls={playing}
+          onPlay={() => setPlaying(true)}
+          onError={() => setFailed(true)}
+          className="h-full w-full object-contain"
+        >
+          Your browser does not support the video tag.{" "}
+          <a href={clip.src}>Download the clip</a> instead.
+        </video>
+
+        {!playing && (
           <button
             type="button"
-            onClick={() => setPlaying(true)}
+            onClick={play}
             aria-label={`Play: ${clip.title}`}
             className="group absolute inset-0 h-full w-full"
           >
-            <img
-              src={clip.poster}
-              alt={clip.title}
-              width={clip.width}
-              height={clip.height}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
-            />
-            <span className="absolute inset-0 flex items-center justify-center">
+            <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors duration-300 group-hover:bg-black/10">
               <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 bg-black/50 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                 <Play className="ml-1 h-6 w-6 text-white" aria-hidden />
               </span>
             </span>
           </button>
+        )}
+
+        {failed && (
+          <p className="absolute inset-x-0 bottom-0 bg-black/80 p-3 text-center text-xs text-slate-300">
+            Trouble playing here?{" "}
+            <a href={clip.src} className="underline hover:text-white" download>
+              Download the clip
+            </a>
+            .
+          </p>
         )}
       </div>
       <figcaption className="p-5">
