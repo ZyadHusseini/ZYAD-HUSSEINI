@@ -182,7 +182,7 @@ export default function ProjectsSection() {
   const visible = projects.filter((p) => filter === "all" || p.category === filter);
 
   return (
-    <section id="projects" className="relative scroll-mt-20 bg-bg-secondary py-24 md:py-32">
+    <section id="projects" className="relative scroll-mt-20 overflow-hidden bg-bg-secondary py-24 md:py-32">
       <div className="ambient animate-drift-c absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="My Work" title="Featured Projects" />

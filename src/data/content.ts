@@ -341,6 +341,7 @@ export const projectFilters = [
   { id: "analytics", label: "Analytics" },
   { id: "development", label: "Development" },
   { id: "research", label: "Research" },
+  { id: "esports", label: "Esports" },
 ] as const;
 
 export const projects: Project[] = [
@@ -601,6 +602,77 @@ export const ventures: Venture[] = [
     gradient: "from-cyan-400 to-indigo-500",
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Esports                                                             */
+/* ------------------------------------------------------------------ */
+
+export interface EsportsClip {
+  /** Used as the VideoObject name — keep it descriptive, it is what shows in video search. */
+  title: string;
+  description: string;
+  src: string;
+  poster: string;
+  /** Intrinsic dimensions: the two handheld clips are portrait, the broadcast is landscape. */
+  width: number;
+  height: number;
+  /** Seconds — converted to ISO 8601 for the VideoObject duration. */
+  seconds: number;
+  featured?: boolean;
+}
+
+/**
+ * Everything here is either something Zyad stated directly or legible on screen
+ * in his own footage (player tag, character, opponent, circuit branding). No
+ * placement, entrant count or event title is asserted beyond that.
+ */
+export const esports = {
+  tag: "ELECTRO_SMG",
+  game: "Tekken 8",
+  character: "Victor",
+  circuit: "Tekken World Tour — MEA 2026",
+  league: "Tekken Egyptian League",
+  placement: "7th place",
+  outcome: "Qualified for the next tournament in the series.",
+  summary:
+    "I compete in Tekken under the tag ELECTRO_SMG, playing Victor in the Tekken Egyptian League on the Tekken World Tour's Middle East and Africa circuit. A 7th-place finish at a Tekken Dojo event carried through to the next tournament in the series.",
+  /** The same competitive thread as six years of professional basketball. */
+  throughline:
+    "Fighting games reward the same things basketball did: reading an opponent, adapting mid-set, and staying composed when a match is decided in single frames.",
+  clips: [
+    {
+      title: "Zyad Husseini (ELECTRO_SMG) vs T-VIRUS — Tekken Egyptian League broadcast",
+      description:
+        "Broadcast match with live commentary from the Tekken Egyptian League on the Tekken World Tour MEA circuit. ELECTRO_SMG on Victor against T-VIRUS on Dragunov, losers bracket, first to two.",
+      src: "/esports/commentary.mp4",
+      poster: "/esports/commentary-poster.jpg",
+      width: 1280,
+      height: 592,
+      seconds: 19,
+      featured: true,
+    },
+    {
+      title: "Zyad Husseini — Tekken tournament match, first set",
+      description:
+        "Handheld footage from the venue during a Tekken Dojo tournament, played on PlayStation 5 at the competitor stations.",
+      src: "/esports/match-1.mp4",
+      poster: "/esports/match-1-poster.jpg",
+      width: 406,
+      height: 720,
+      seconds: 62,
+    },
+    {
+      title: "Zyad Husseini — Tekken tournament match, second set",
+      description:
+        "Further handheld footage from the same Tekken Dojo tournament run that finished 7th and qualified for the next event.",
+      src: "/esports/match-2.mp4",
+      poster: "/esports/match-2-poster.jpg",
+      width: 406,
+      height: 720,
+      seconds: 75,
+    },
+  ] as EsportsClip[],
+};
 
 /* ------------------------------------------------------------------ */
 /* Companies — slideshow                                               */
@@ -977,6 +1049,7 @@ export const navLinks = [
   { id: "projects", label: "Projects" },
   { id: "research", label: "Research" },
   { id: "ventures", label: "Ventures" },
+  { id: "esports", label: "Esports" },
   { id: "cv", label: "CV" },
   { id: "contact", label: "Contact" },
 ] as const;

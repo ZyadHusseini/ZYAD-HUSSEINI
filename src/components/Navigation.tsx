@@ -77,7 +77,13 @@ export default function Navigation({ visible }: { visible: boolean }) {
           </a>
 
           {/* desktop links */}
-          <ul className="hidden items-center gap-8 md:flex">
+          {/*
+            Full nav appears at lg, not md. Nine links need ~750px; at the md
+            breakpoint (768px) that collided with the logo and the Hire Me
+            button and pushed the document into horizontal scroll. Tablets get
+            the same overlay menu as phones, which was already built.
+          */}
+          <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
@@ -110,13 +116,13 @@ export default function Navigation({ visible }: { visible: boolean }) {
             </button>
             <a
               href="#contact"
-              className="hidden rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-5 py-2 text-sm font-semibold text-white transition-shadow hover:shadow-[0_0_24px_rgba(99,102,241,0.45)] md:inline-block"
+              className="hidden rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 px-5 py-2 text-sm font-semibold text-white transition-shadow hover:shadow-[0_0_24px_rgba(99,102,241,0.45)] lg:inline-block"
             >
               Hire Me
             </a>
             <button
               type="button"
-              className="glass p-2 text-white md:hidden"
+              className="glass p-2 text-white lg:hidden"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
               aria-expanded={menuOpen}
@@ -135,7 +141,7 @@ export default function Navigation({ visible }: { visible: boolean }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[75] flex flex-col bg-[#0a0a0f]/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-[75] flex flex-col bg-[#0a0a0f]/95 backdrop-blur-xl lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Menu"

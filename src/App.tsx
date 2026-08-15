@@ -13,6 +13,7 @@ import ResearchSection from "./components/ResearchSection";
 import VenturesSection from "./components/VenturesSection";
 import CVHighlights from "./components/CVHighlights";
 import ContactSection from "./components/ContactSection";
+import EsportsSection from "./components/EsportsSection";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import CommandPalette from "./components/CommandPalette";
@@ -46,6 +47,7 @@ export default function App() {
           <ResearchSection />
           <VenturesSection />
           <CVHighlights />
+          <EsportsSection />
           <FaqSection />
           <ContactSection />
         </main>

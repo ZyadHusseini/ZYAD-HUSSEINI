@@ -149,7 +149,7 @@ function SkillConstellation() {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative scroll-mt-20 bg-bg-secondary py-24 md:py-32">
+    <section id="about" className="relative scroll-mt-20 overflow-hidden bg-bg-secondary py-24 md:py-32">
       <div className="ambient animate-drift-b absolute right-0 top-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="Get To Know Me" title="About Me" />

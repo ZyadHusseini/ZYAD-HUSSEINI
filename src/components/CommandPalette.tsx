@@ -7,6 +7,7 @@ import {
   FileText,
   FlaskConical,
   FolderKanban,
+  Gamepad2,
   Github,
   Instagram,
   Link,
@@ -53,6 +54,7 @@ export default function CommandPalette() {
         run: () =>
           window.open("/research/Zyad-Husseini-Renewable-Energy-Economic-Growth.pdf", "_blank"),
       },
+      { id: "esports", label: "Jump to Esports", hint: "Tekken", icon: Gamepad2, run: jump("esports") },
       { id: "cv", label: "Jump to CV", hint: "section", icon: FileText, run: jump("cv") },
       { id: "contact", label: "Jump to Contact", hint: "section", icon: Mail, run: jump("contact") },
       {

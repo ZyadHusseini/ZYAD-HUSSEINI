@@ -157,7 +157,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="relative scroll-mt-20 bg-bg-secondary py-24 md:py-32">
+    <section id="contact" className="relative scroll-mt-20 overflow-hidden bg-bg-secondary py-24 md:py-32">
       <div className="ambient animate-drift-a absolute left-0 top-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading eyebrow="Get In Touch" title="Let's Work Together" />
