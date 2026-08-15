@@ -10,6 +10,11 @@ Audit date: 5 Aug 2026, updated 12 Aug 2026. Canonical host: `https://www.zyadhu
 | GitHub entity signals | **Live.** Profile README at github.com/ZyadHusseini linking the site; ZYAD-HUSSEINI repo public with homepage + description set |
 | Google crawl discovery | Depends on links from indexed pages (GitHub now provides two) and on Search Console — see below |
 | Bing index check (12 Aug) | 0 pages — expected, ping just submitted |
+| **Google Search Console** | **Verified and live (15 Aug).** Domain property `zyadhusseini.com`. Sitemap submitted, last read 15 Aug, status **Success**, **3 pages discovered** — Google parsed the sitemap cleanly and found all three URLs. Note: ownership is *not* visible as a `google-site-verification` DNS TXT record (Squarespace, which absorbed Google Domains, verifies through its registrar integration) — so do not use "no TXT record" to conclude verification is missing. |
+
+**Discovered ≠ indexed.** Three URLs discovered means Google knows they exist. The
+next lever is URL Inspection → *Request indexing* on the homepage, which pushes it
+into the crawl queue directly instead of waiting for Google to get round to it.
 
 ## Done (in the repo, deployed)
 
