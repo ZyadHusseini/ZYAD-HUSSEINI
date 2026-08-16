@@ -36,18 +36,6 @@
     border-radius: 2px;
   }
 
-  /* Hide the native cursor only on precise-pointer devices (custom cursor takes over) */
-  @media (hover: hover) and (pointer: fine) {
-    body.custom-cursor-active,
-    body.custom-cursor-active a,
-    body.custom-cursor-active button,
-    body.custom-cursor-active input,
-    body.custom-cursor-active textarea,
-    body.custom-cursor-active [role="button"] {
-      cursor: none;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;

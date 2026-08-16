@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MotionConfig } from "framer-motion";
 import IntroAnimation from "./components/IntroAnimation";
-import CustomCursor from "./components/CustomCursor";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import LogoMarquee from "./components/LogoMarquee";
@@ -34,7 +33,6 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <ToastProvider>
         {!introDone && <IntroAnimation onComplete={() => setIntroDone(true)} />}
-        <CustomCursor />
         <CommandPalette />
         <Navigation visible={introDone} />
         <main id="main">
