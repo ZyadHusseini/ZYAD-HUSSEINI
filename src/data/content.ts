@@ -192,6 +192,11 @@ export const faqs: FaqItem[] = [
       "This site is the portfolio — projects, research and roles in one place, kept current. The CV is downloadable in English and French from the CV section, and either version serves as a résumé for applications. Both research papers are hosted here in full too, so there is nothing extra to request by email.",
   },
   {
+    question: "Does he compete in esports?",
+    answer:
+      "Yes — he plays Tekken under the tag ELECTRO_SMG, maining Victor in the Tekken Egyptian League on the Tekken World Tour's Middle East and Africa circuit. A 7th-place finish at a Tekken Dojo event qualified him for the next tournament in the series. It follows six years as a professional basketball player, and the site hosts a broadcast match with commentary alongside footage from the venue.",
+  },
+  {
     question: "Is his name spelled other ways?",
     answer:
       "It is. Romanising an Arabic name has no single standard, so Zyad Husseini is also written Ziad Husseini, Zeyad Husseini and Ziyad Husseini. Academic work is filed under his full name, Zyad Mohamed Mahmoud Reda Husseini. They all refer to the same person — the data analyst and economist behind zyadhusseini.com.",
