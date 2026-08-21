@@ -139,6 +139,7 @@ export default function EsportsSection() {
         >
           <p className="leading-relaxed text-slate-400">{esports.summary}</p>
           <p className="mt-4 leading-relaxed text-slate-500">{esports.throughline}</p>
+          <p className="mt-3 leading-relaxed text-slate-500">{esports.history}</p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             {facts.map((f) => {

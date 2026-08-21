@@ -143,7 +143,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Who is Zyad Husseini?",
     answer:
-      "Zyad Husseini is an Egyptian data analyst, economist and entrepreneur working between France and Egypt. He is studying for an MSc in Data Analytics for Business at Kedge Business School, having graduated from The American University in Cairo in 2025 with a BA in Economics and minors in Business Administration and Computer Science. His work spans business intelligence, econometrics, investment analysis and AI product development.",
+      "Zyad Husseini is an Egyptian data analyst, economist and entrepreneur working between France and Egypt. He is studying for an MSc in Data Analytics for Business at Kedge Business School, having graduated from The American University in Cairo in 2025 with a BA in Econometrics and Quantitative Economics and minors in Business Administration and Computer Science. His work spans business intelligence, econometrics, investment analysis and AI product development.",
   },
   {
     question: "What does Zyad Husseini do?",
@@ -153,7 +153,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Where did he study?",
     answer:
-      "He is studying for an MSc in Data Analytics for Business at Kedge Business School in France, expected 2027. Before that he read Economics at The American University in Cairo (AUC), graduating in 2025 with minors in Business Administration and Computer Science and a place on the Dean's List. He completed an American and International Baccalaureate at MASE in Egypt in 2020.",
+      "He is studying for an MSc in Data Analytics for Business at Kedge Business School in France, expected 2027. Before that he read Econometrics and Quantitative Economics at The American University in Cairo (AUC), graduating in 2025 with minors in Business Administration and Computer Science and a place on the Dean's List. He completed an American and International Baccalaureate at MASE in Egypt in 2020.",
   },
   {
     question: "What is his research about?",
@@ -649,7 +649,19 @@ export interface EsportsClip {
  * in his own footage (player tag, character, opponent, circuit branding). No
  * placement, entrant count or event title is asserted beyond that.
  */
-export const esports = {
+export const esports: {
+  tag: string;
+  game: string;
+  character: string;
+  circuit: string;
+  league: string;
+  placement: string;
+  outcome: string;
+  summary: string;
+  throughline: string;
+  history: string;
+  clips: EsportsClip[];
+} = {
   tag: "ELECTRO_SMG",
   game: "Tekken 8",
   character: "Victor",
@@ -662,6 +674,9 @@ export const esports = {
   /** The same competitive thread as six years of professional basketball. */
   throughline:
     "Fighting games reward the same things basketball did: reading an opponent, adapting mid-set, and staying composed when a match is decided in single frames.",
+  /** Competitive gaming predates the Tekken run by a decade. */
+  history:
+    "Tekken follows twelve years competing in FIFA and Call of Duty with Reading Ravens Esports, where top-three placements were routine.",
   clips: [
     {
       title: "Zyad Husseini (ELECTRO_SMG) vs T-VIRUS — Tekken Egyptian League broadcast",
@@ -1026,15 +1041,15 @@ export const education: EducationItem[] = [
   {
     degree: "MSc Data Analytics",
     school: "Kedge Business School",
-    place: "France",
-    year: "Expected 2027",
+    place: "Bordeaux, France",
+    year: "Sep 2025 – Apr 2027",
     highlights: ["Data Analytics Specialization", "Advanced Statistical Methods"],
   },
   {
-    degree: "BA Economics",
+    degree: "BA Econometrics & Quantitative Economics",
     school: "The American University in Cairo",
-    place: "Egypt",
-    year: "2025",
+    place: "Cairo, Egypt",
+    year: "Jan 2021 – May 2025",
     highlights: ["Minor: Business Administration", "Minor: Computer Science", "Dean's List"],
   },
   {
@@ -1055,6 +1070,9 @@ export interface Credential {
 }
 
 export const credentials: Credential[] = [
+  { title: "Microsoft Certified", issuer: "Microsoft", year: "—", kind: "certification", icon: Award },
+  { title: "Associate Data Engineer in SQL", issuer: "DataCamp", year: "2026", kind: "certification", icon: Database },
+  { title: "McKinsey Forward Program", issuer: "McKinsey & Company", year: "2026", kind: "certification", icon: GraduationCap },
   { title: "Economics Course", issuer: "ITC & United Nations", year: "2024", kind: "certification", icon: GraduationCap },
   { title: "CMA Part One", issuer: "IMA", year: "2024", kind: "certification", icon: Award },
   { title: "EFG Hermes Stock Market Competition — 3rd Place", issuer: "EFG Hermes", year: "2024", kind: "achievement", icon: Trophy },

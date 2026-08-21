@@ -21,8 +21,8 @@ Canonical site: https://www.zyadhusseini.com/
 
 ## Education
 
-- MSc Data Analytics for Business — Kedge Business School, France (expected 2027)
-- BA Economics — The American University in Cairo, Egypt (2025). Minors in Business Administration and Computer Science. Dean's List.
+- MSc Data Analytics for Business — Kedge Business School, Bordeaux, France (Sep 2025 – Apr 2027)
+- BA Econometrics & Quantitative Economics — The American University in Cairo, Egypt (Jan 2021 – May 2025). Minors in Business Administration and Computer Science. Dean's List.
 - American & International Baccalaureate (IB) — MASE, Egypt (2020)
 
 ## Skills
@@ -112,6 +112,8 @@ Competes in Tekken under the tag ELECTRO_SMG, playing Victor.
   against T-VIRUS on Dragunov, losers bracket, first to two) and two handheld clips from the venue.
 - Connects to six years as a professional basketball player: reading an opponent, adapting
   mid-set, and staying composed when a match is decided in single frames.
+- Follows twelve years competing in FIFA and Call of Duty with Reading Ravens Esports,
+  where top-three placements were routine.
 - Clips: https://www.zyadhusseini.com/#esports
 
 ## Recognition
@@ -122,6 +124,9 @@ Competes in Tekken under the tag ELECTRO_SMG, playing Victor.
 - Economics course with the ITC and United Nations, Italy (2024)
 - CMA Part One (2024)
 - Professional basketball player, El Haras El Gomhory (2018–2024)
+- Microsoft Certified (Microsoft)
+- Associate Data Engineer in SQL (DataCamp, 2026)
+- McKinsey Forward Program (McKinsey & Company, 2026)
 
 ## Profiles
 
