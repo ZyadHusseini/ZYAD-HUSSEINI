@@ -6,7 +6,6 @@ import {
   Braces,
   BrainCircuit,
   Briefcase,
-  Calculator,
   CandlestickChart,
   Code2,
   Database,
@@ -149,7 +148,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What does Zyad Husseini do?",
     answer:
-      "He turns business data into decisions — building Power BI dashboards and data models, running econometric analysis, and developing AI products. He currently works on AI automation at BUB AI and AI product development at Brayn Solutions, alongside a Business Development Associate role and a Research and Marketing Specialist role. He previously covered investment analysis at Media Trade.",
+      "He turns business data into decisions — building Power BI dashboards and data models, running econometric analysis, and developing AI products. He is CEO of PNM Agency, a data analyst at Pack 'N' Move Logistics Egypt, and co-founder of both Matgarak and NAVI. Earlier roles covered AI automation at bub AI, AI product development at Brayn Solutions, investment analysis at Media Trade and business intelligence at EFG Holding.",
   },
   {
     question: "Where did he study?",
@@ -254,54 +253,71 @@ export interface Job {
 
 export const mainExperience: Job[] = [
   {
-    role: "Business Development Associate",
-    company: "Current Company",
+    role: "Chief Executive Officer",
+    company: "PNM Agency",
+    period: "Jun 2026 – Present",
+    type: "Full-time",
+    description: "Leading the agency across creative direction, content, media buying and full campaign management.",
+    tags: ["Leadership", "Marketing Strategy", "Client Relations"],
+  },
+  {
+    role: "Data Analyst",
+    company: "Pack 'N' Move Logistics Egypt",
+    period: "Apr 2026 – Present",
+    type: "Full-time",
+    description: "Analytics across air, sea and land freight operations for the logistics group.",
+    tags: ["Data Analysis", "Logistics", "Power BI"],
+  },
+  {
+    role: "Co-Founder",
+    company: "Matgarak",
     period: "Jan 2026 – Present",
     type: "Full-time",
-    description: "Leading business development initiatives and strategic partnerships.",
-    tags: ["Business Strategy", "Client Relations", "Market Analysis"],
+    description:
+      "Co-founded an e-commerce platform letting businesses launch online stores, manage orders, connect shipping and take payments in one place. Launched publicly in 2026.",
+    tags: ["E-commerce", "Product", "Startup"],
   },
   {
-    role: "Research and Marketing Specialist",
-    company: "Current Company",
-    period: "Dec 2025 – Present",
+    role: "Co-Founder",
+    company: "NAVI",
+    period: "Nov 2025 – Present",
     type: "Full-time",
-    description: "Conducting market research and developing marketing strategies.",
-    tags: ["Market Research", "Marketing Strategy", "Data Analysis"],
+    description: "Co-founded a student operating system bringing courses, notes, schedules and AI tools together.",
+    tags: ["Ed-Tech", "Product", "AI"],
   },
   {
-    role: "AI Product Development & Website Creation",
+    role: "Interim Chief Marketing Officer",
+    company: "RESET EGY",
+    period: "Mar 2026 – May 2026",
+    type: "Full-time",
+    description: "Led marketing during an interim engagement.",
+    tags: ["Marketing Strategy", "Leadership"],
+  },
+  {
+    role: "Business Development Associate",
+    company: "Pathway Commercial Finance Ltd",
+    period: "Jan 2026 – Mar 2026",
+    type: "Full-time",
+    description: "Business development for a commercial finance firm in Scotland, United Kingdom.",
+    tags: ["Business Development", "Commercial Finance", "Market Analysis"],
+  },
+  {
+    role: "AI Product Development & Marketing",
     company: "Brayn Solutions",
-    period: "Dec 2025 – Present",
+    period: "Dec 2025 – Mar 2026",
     type: "Full-time",
-    description: "Developing AI-powered products and creating web solutions for clients.",
-    tags: ["AI/ML", "Web Development", "Product Management"],
+    description:
+      "Built AI-powered products and client websites, and worked as Marketing Specialist across the same period.",
+    tags: ["AI/ML", "Web Development", "Marketing"],
   },
   {
-    role: "Investment Analyst",
-    company: "Media Trade",
-    // Ended; exact end month to be confirmed. "2026" is certain rather than
-    // assumed: the role began Dec 2025 and had concluded by Aug 2026.
-    period: "Dec 2025 – 2026",
+    role: "AI Automation Specialist",
+    company: "bub AI",
+    period: "Oct 2025 – Mar 2026",
     type: "Full-time",
-    description: "Analyzing investment opportunities and providing financial insights.",
-    tags: ["Financial Analysis", "Investment Research", "Risk Assessment"],
-  },
-  {
-    role: "AI Automation & Workflows Specialist",
-    company: "BUB AI",
-    period: "Oct 2025 – Present",
-    type: "Full-time",
-    description: "Designing and implementing AI automation workflows to optimize business processes.",
-    tags: ["AI Automation", "Workflow Design", "Process Optimization"],
-  },
-  {
-    role: "Data Analytics Intern",
-    company: "EFG Hermes",
-    period: "Aug 2025 – Sep 2025",
-    type: "Internship",
-    description: "Created multiple unique Power BI dashboards for financial data visualization.",
-    tags: ["Power BI", "Financial Analytics", "Dashboard Design"],
+    description:
+      "Ran customer outreach campaigns while optimising AI prompts and workflows for engagement and retention.",
+    tags: ["AI Automation", "Workflow Design", "Prompt Engineering"],
   },
 ];
 
@@ -314,10 +330,10 @@ export interface PreviousJob {
 }
 
 export const previousExperience: PreviousJob[] = [
-  { role: "Data Analytics", company: "AR CORP", period: "Jan – Jun 2025", type: "Part-time", icon: BarChart3 },
-  { role: "Data Analytics Intern", company: "Pack N Move", period: "Dec 2024 – Jan 2025", type: "Internship", icon: LayoutDashboard },
-  { role: "Marketeer", company: "Pack N Move", period: "May 2020 – Mar 2021", type: "Part-time", icon: Megaphone },
-  { role: "Accountant", company: "Pack N Move", period: "May 2019 – Mar 2020", type: "Part-time", icon: Calculator },
+  { role: "Investment Analyst", company: "Media Trade for Import & Agencies", period: "Dec 2025 – Mar 2026", type: "Part-time", icon: CandlestickChart },
+  { role: "Business Intelligence Analyst", company: "EFG Holding", period: "Aug 2025", type: "Internship", icon: BarChart3 },
+  { role: "EPMO & Financial Analyst", company: "Arcorp", period: "Feb – Jun 2025", type: "Full-time", icon: Workflow },
+  { role: "Business Intelligence Analyst", company: "London Cab Egypt", period: "Nov 2024 – Mar 2025", type: "Part-time", icon: LayoutDashboard },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -551,13 +567,13 @@ export interface Venture {
 }
 
 export const venturesIntro =
-  "Data analyst and entrepreneur building digital products, brands, and businesses across tech, marketing, and logistics.";
+  "Data analyst and entrepreneur building digital products, brands, and businesses across tech, marketing, and logistics. CEO of PNM Agency; co-founder of Matgarak and NAVI.";
 
 export const ventures: Venture[] = [
   {
     name: "PNM Agency",
     category: "Digital Agency",
-    description: "Digital agency crafting brands, websites, and marketing for clients across the region.",
+    description: "Digital agency crafting brands, websites and marketing for clients across the region. Zyad is its CEO.",
     // Canonical host is www (the apex 301s here) — link straight to it.
     url: "https://www.pnmagency.com",
     displayUrl: "pnmagency.com",
@@ -593,7 +609,7 @@ export const ventures: Venture[] = [
   {
     name: "Matgarak",
     category: "Digital Products",
-    description: "Helping teams launch modern digital experiences with speed, clarity, and measurable results.",
+    description: "E-commerce platform he co-founded: launch a store, manage orders, connect shipping and take payments in one place.",
     url: "https://matgarak.com",
     displayUrl: "matgarak.com",
     icon: Store,
@@ -685,7 +701,12 @@ export const esports = {
 /* Companies — slideshow                                               */
 /* ------------------------------------------------------------------ */
 
-export type CompanyRelation = "Current role" | "Venture" | "Previous" | "Collaboration";
+export type CompanyRelation =
+  | "Current role"
+  | "Co-founded"
+  | "Venture"
+  | "Previous"
+  | "Collaboration";
 
 export interface Company {
   name: string;
@@ -716,113 +737,124 @@ export interface Company {
 /** Newest and most significant first — this is the order the slideshow plays in. */
 export const companies: Company[] = [
   {
+    name: "PNM Agency",
+    relation: "Current role",
+    role: "Chief Executive Officer",
+    period: "Jun 2026 — present",
+    summary:
+      "Leads the agency across creative direction, content, media buying and full campaign management.",
+    highlights: ["Leadership", "Campaigns", "Brand strategy"],
+    url: "https://www.pnmagency.com",
+    logo: "/logos/pnm-agency.png",
+  },
+  {
+    name: "Pack 'N' Move Logistics Egypt",
+    relation: "Current role",
+    role: "Data Analyst",
+    period: "Apr 2026 — present",
+    summary:
+      "Analytics across air, sea and land freight for the logistics group he first joined in 2024.",
+    highlights: ["Data analysis", "Logistics", "Power BI"],
+    url: "https://www.pnmholding.com",
+    logo: "/logos/pack-n-move.png",
+  },
+  {
+    name: "Matgarak",
+    relation: "Co-founded",
+    role: "Co-Founder",
+    period: "Jan 2026 — present",
+    summary:
+      "E-commerce platform letting businesses launch a store, manage orders, connect shipping and take payments in one place.",
+    highlights: ["E-commerce", "Product", "Launched 2026"],
+    url: "https://matgarak.com",
+  },
+  {
+    name: "NAVI",
+    relation: "Co-founded",
+    role: "Co-Founder",
+    period: "Nov 2025 — present",
+    summary:
+      "A student operating system — courses, notes, schedules, study groups and AI tools in one command centre.",
+    highlights: ["Ed-tech", "AI tools", "Product"],
+    url: "https://navi.geo-ed.tech/landing",
+    logo: "/logos/navi.png",
+  },
+  {
     name: "L'Oréal",
     relation: "Collaboration",
     role: "Hackathon — Sustainable ML",
-    period: "2026",
+    period: "Jan 2026",
     summary:
       "Built a multi-label model classifying skin conditions from product descriptions, judged on carbon cost as well as accuracy, and presented it at L'Oréal's Paris headquarters.",
     highlights: ["6,240 products", "~2,000× less CO₂", "Presented in Paris"],
   },
   {
+    name: "RESET EGY",
+    relation: "Previous",
+    role: "Interim Chief Marketing Officer",
+    period: "Mar — May 2026",
+    summary: "Led marketing during an interim engagement.",
+    highlights: ["Marketing strategy", "Leadership"],
+  },
+  {
+    name: "Pathway Commercial Finance",
+    relation: "Previous",
+    role: "Business Development Associate",
+    period: "Jan — Mar 2026",
+    summary: "Business development for a commercial finance firm in Scotland, United Kingdom.",
+    highlights: ["Business development", "Commercial finance", "UK"],
+  },
+  {
     name: "Brayn Solutions",
-    relation: "Current role",
-    role: "AI Product Development & Website Creation",
-    period: "Dec 2025 — present",
-    summary: "Developing AI-powered products and building web solutions for clients.",
-    highlights: ["AI/ML", "Web development", "Product management"],
+    relation: "Previous",
+    role: "AI Product Development & Marketing",
+    period: "Dec 2025 — Mar 2026",
+    summary: "Built AI-powered products and client websites, alongside a marketing specialist role.",
+    highlights: ["AI/ML", "Web development", "Marketing"],
+  },
+  {
+    name: "bub AI",
+    relation: "Previous",
+    role: "AI Automation Specialist",
+    period: "Oct 2025 — Mar 2026",
+    summary:
+      "Ran customer outreach campaigns while optimising AI prompts and workflows for engagement and retention.",
+    highlights: ["AI automation", "Prompt design", "Outreach"],
   },
   {
     name: "Media Trade",
     relation: "Previous",
     role: "Investment Analyst",
-    period: "Dec 2025 — 2026",
+    period: "Dec 2025 — Mar 2026",
     summary: "Analysing investment opportunities and producing the financial reads behind them.",
     highlights: ["Financial analysis", "Investment research", "Risk assessment"],
   },
   {
-    name: "BUB AI",
-    relation: "Current role",
-    role: "AI Automation & Workflows Specialist",
-    period: "Oct 2025 — present",
-    summary: "Designing and shipping AI automation workflows that take manual steps out of business processes.",
-    highlights: ["AI automation", "Workflow design", "Process optimisation"],
-  },
-  {
-    name: "EFG Hermes",
+    name: "EFG Holding",
     relation: "Previous",
-    role: "Data Analytics Intern",
-    period: "Aug — Sep 2025",
+    role: "Business Intelligence Analyst",
+    period: "Aug 2025",
     summary:
-      "Built Power BI dashboards for financial data visualisation inside one of MENA's leading investment banks.",
+      "Built Power BI dashboards for financial data visualisation inside one of MENA's leading financial groups.",
     highlights: ["Power BI", "DAX", "Financial analytics"],
   },
   {
-    name: "AR CORP",
+    name: "Arcorp",
     relation: "Previous",
-    role: "Data Analytics",
+    role: "EPMO & Financial Analyst",
     period: "Jan — Jun 2025",
     summary:
-      "Connected a cash-flow statement directly to the ERP system in Power BI, replacing a manual monthly reporting cycle with a live report.",
-    highlights: ["ERP integration", "Power BI", "Business intelligence"],
+      "Consolidated subsidiary data into one database for group-wide analysis and connected a cash-flow statement to the ERP system in Power BI.",
+    highlights: ["ERP integration", "Power BI", "Forecasting"],
   },
   {
-    name: "Pack N Move",
-    logo: "/logos/pack-n-move.png",
-    logoWidth: 119,
-    logoHeight: 152,
+    name: "London Cab Egypt",
     relation: "Previous",
-    role: "Data Analytics · Marketing · Accounting",
-    period: "2019 — 2025",
+    role: "Business Intelligence Analyst",
+    period: "Nov 2024 — Mar 2025",
     summary:
-      "Six years across three roles — starting in accounts, moving through marketing across the Gulf, and returning to build business-intelligence dashboards.",
-    highlights: ["BI dashboards", "Gulf market marketing", "Accounting"],
-  },
-  {
-    name: "PNM Agency",
-    logo: "/logos/pnm-agency.png",
-    logoWidth: 1051,
-    logoHeight: 533,
-    relation: "Venture",
-    role: "Digital agency",
-    period: "Ongoing",
-    summary: "Brands, websites and marketing built for clients across the region.",
-    highlights: ["Branding", "Web", "Marketing"],
-    url: "https://www.pnmagency.com",
-  },
-  {
-    name: "PNM Group",
-    logo: "/logos/pnm-group.png",
-    logoWidth: 500,
-    logoHeight: 171,
-    relation: "Venture",
-    role: "Logistics & holding",
-    period: "Ongoing",
-    summary: "The moving and logistics group behind the Pack N Move family of brands.",
-    highlights: ["Logistics", "Egypt & Gulf", "Holding"],
-    url: "https://www.pnmholding.com",
-  },
-  {
-    name: "NAVI",
-    logo: "/logos/navi.png",
-    logoWidth: 600,
-    logoHeight: 169,
-    relation: "Venture",
-    role: "Ed-tech",
-    period: "Ongoing",
-    summary:
-      "A student operating system — courses, notes, schedules, study groups and AI tools in one command centre.",
-    highlights: ["Ed-tech", "AI tools", "Product"],
-    url: "https://navi.geo-ed.tech/landing",
-  },
-  {
-    name: "Matgarak",
-    relation: "Venture",
-    role: "Digital products",
-    period: "Ongoing",
-    summary: "Helping teams launch modern digital experiences with speed and measurable results.",
-    highlights: ["Digital products", "Launch", "Growth"],
-    url: "https://matgarak.com",
+      "Built an interactive Power BI dashboard analysing cab operations — trip patterns, revenue and performance metrics.",
+    highlights: ["Power BI", "Freelance", "Operations analytics"],
   },
   {
     name: "Qemto",
