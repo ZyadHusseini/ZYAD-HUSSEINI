@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes. — Zyad Husseini</title>
+    <meta name="description" content="Every business intelligence tutorial starts with a clean data source. A warehouse, a schema, an API. In Egyptian logistics — and I suspect across most of the MENA operating en" />
+    <meta name="author" content="Zyad Husseini" />
+    <link rel="canonical" href="https://www.zyadhusseini.com/writing/egypt-logistics-data/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="keywords" content="Egypt, logistics, business intelligence, Power BI, data analytics, MENA" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes." />
+    <meta property="og:description" content="Every business intelligence tutorial starts with a clean data source. A warehouse, a schema, an API. In Egyptian logistics — and I suspect across most of the MENA operating en" />
+    <meta property="og:url" content="https://www.zyadhusseini.com/writing/egypt-logistics-data/" />
+    <meta property="og:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <meta property="og:site_name" content="Zyad Husseini" />
+    <meta property="article:author" content="Zyad Husseini" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes." />
+    <meta name="twitter:description" content="Every business intelligence tutorial starts with a clean data source. A warehouse, a schema, an API. In Egyptian logistics — and I suspect across most of the MENA operating en" />
+    <meta name="twitter:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes.",
+  "description": "Every business intelligence tutorial starts with a clean data source. A warehouse, a schema, an API. In Egyptian logistics — and I suspect across most of the MENA operating en",
+  "author": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "alternateName": [
+      "Ziad Husseini",
+      "Zeyad Husseini",
+      "Ziyad Husseini"
+    ],
+    "url": "https://www.zyadhusseini.com/",
+    "image": "https://www.zyadhusseini.com/assets/zyad-husseini.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/zyadmhr/",
+      "https://github.com/ZyadHusseini",
+      "https://linktr.ee/zyadmhrhusseini"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "url": "https://www.zyadhusseini.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.zyadhusseini.com/writing/egypt-logistics-data/"
+  },
+  "inLanguage": "en",
+  "keywords": "Egypt, logistics, business intelligence, Power BI, data analytics, MENA",
+  "image": "https://www.zyadhusseini.com/assets/og-image.jpg"
+}
+    </script>
+    <style>:root{--bg:#05070d;--fg:#e2e8f0;--dim:#94a3b8;--faint:#64748b;--line:rgba(148,163,184,.16);--accent:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.75 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(167,139,250,.35)}
+a:hover{border-bottom-color:var(--accent)}
+nav{display:flex;gap:1.25rem;font-size:.875rem;margin-bottom:3.5rem}
+nav a{color:var(--faint);border:0}
+nav a:hover{color:var(--fg)}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 1rem;font-weight:700}
+h2{font-size:1.4rem;line-height:1.3;letter-spacing:-.01em;margin:3rem 0 1rem;font-weight:650}
+h3{font-size:1.12rem;margin:2.25rem 0 .75rem;font-weight:650}
+p{margin:0 0 1.35rem;color:#cbd5e1}
+ul{margin:0 0 1.35rem;padding-left:1.15rem;color:#cbd5e1}
+li{margin:.4rem 0}
+strong{color:#fff;font-weight:650}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:rgba(148,163,184,.12);padding:.15em .4em;border-radius:4px}
+hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+.meta{color:var(--faint);font-size:.875rem;margin:0 0 2.5rem}
+.note{color:var(--faint);font-size:.925rem}
+.tw{overflow-x:auto;margin:0 0 1.5rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:#fff;font-weight:650;white-space:nowrap}
+td{color:#cbd5e1}
+footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--faint)}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a href="/">← Zyad Husseini</a>
+        <a href="/writing/">Writing</a>
+        <a href="/#research">Research</a>
+      </nav>
+      <article>
+      <h1>Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes.</h1>
+      <p class="meta">By <a href="/">Zyad Husseini</a> · Data analyst and economist, France &amp; Egypt</p>
+      <p>Every business intelligence tutorial starts with a clean data source. A warehouse, a schema, an API. In Egyptian logistics — and I suspect across most of the MENA operating environment — that is not the starting position, and pretending otherwise is why so many BI projects here die in month three.</p>
+      <p>The actual starting position is a driver confirming a delivery on WhatsApp, an operations coordinator typing it into a spreadsheet that already has three divergent copies, and a finance team reconciling that spreadsheet against an ERP that nobody fully trusts. I have worked as a data analyst at Pack 'N' Move Logistics Egypt, on business intelligence for London Cab Egypt, and on ERP cash-flow integration at Arcorp — and this pattern was present, in some form, at every one of them.</p>
+      <p>Here is what I have learned about building on that ground rather than complaining about it.</p>
+      <h2>The bottleneck is definitional, not technical</h2>
+      <p>The first dashboard I build is almost never the hard part. Power BI will happily connect to a spreadsheet in ten minutes.</p>
+      <p>The hard part is that &quot;delivered&quot; means four different things to four different departments. Operations means the driver marked it complete. Finance means the invoice cleared. Customer service means the client stopped calling. The warehouse means it left the building.</p>
+      <p>Build a dashboard before resolving that, and you ship a number that every department can point at and say &quot;that's wrong&quot; — and every one of them is right, because you picked one definition and four exist. The dashboard then dies, not because the DAX was bad, but because it had no agreed referent.</p>
+      <p>So the sequence that works is: <strong>agree the definition, write it down, then build.</strong> The written-down part matters. Verbal agreement evaporates the moment the number says something inconvenient.</p>
+      <h2>Design for the data you have, not the data you want</h2>
+      <p>A second failure mode is building the pipeline that assumes clean, timestamped, system-generated events, and then blaming the operation for not producing them.</p>
+      <p>The operation is not going to change its behaviour because your model needs it to. Drivers will keep using WhatsApp, because WhatsApp works on any handset, on weak signal, in Arabic, with no training. That is a real advantage and your architecture should absorb it rather than fight it.</p>
+      <p>Practically: build ingestion that tolerates manual entry, late arrivals, duplicate records and inconsistent spelling of the same client name. Put the reconciliation logic in the pipeline where it can be versioned and audited, rather than in a coordinator's head where it cannot.</p>
+      <h2>Connect to the ERP last, and connect deliberately</h2>
+      <p>At Arcorp I consolidated subsidiary data and connected a cash-flow statement to an ERP system in Power BI. The lesson from that work was about ordering.</p>
+      <p>The ERP is the system of record for finance, and the moment you wire live reporting to it, every discrepancy between operational reality and financial record becomes visible at once. That is the <em>goal</em> — but it is also a political event inside a company, and it goes far better when the operational definitions are already settled and written down. Connect the ERP first and the resulting argument is about your dashboard. Connect it last and the argument is about the underlying discrepancy, which is the argument worth having.</p>
+      <h2>The bilingual problem nobody mentions</h2>
+      <p>Client names, addresses and route descriptions arrive in Arabic and English, and frequently in transliterated Arabic that has no standard spelling. The same customer will appear four ways.</p>
+      <p>Entity resolution is therefore not an advanced feature you add later. In an Egyptian logistics dataset it is a first-week requirement, and if you skip it your counts are wrong in a way that is invisible until someone senior notices the client list is longer than the client list.</p>
+      <h2>Why this is worth doing here</h2>
+      <p>There is a persistent assumption that serious data work belongs to markets with mature data infrastructure, and that operations here should wait until they have it. I think that has it backwards. The gap between what an Egyptian logistics operation currently knows about itself and what it <em>could</em> know is far larger than the equivalent gap in a market where reporting is already mature — which means the return on getting it right is larger too.</p>
+      <p>The constraint is real. It is also not a reason to wait.</p>
+      <hr />
+      <p class="note"><em>I'm Zyad Husseini — a data analyst and economist working between France and Egypt. I hold a BA in Econometrics and Quantitative Economics from The American University in Cairo and am completing an MSc in Data Analytics at Kedge Business School, and I work across the PNM group of logistics and technology companies. More at <a href="https://www.zyadhusseini.com/">zyadhusseini.com</a> · <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a></em></p>
+      </article>
+      <footer>
+        Written by <strong>Zyad Husseini</strong> — also written Ziad, Zeyad or Ziyad Husseini.
+        MSc Data Analytics at Kedge Business School; BA Econometrics &amp; Quantitative Economics,
+        The American University in Cairo.<br /><br />
+        <a href="/">zyadhusseini.com</a> ·
+        <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a> ·
+        <a href="https://github.com/ZyadHusseini">GitHub</a>
+      </footer>
+    </div>
+  </body>
+</html>

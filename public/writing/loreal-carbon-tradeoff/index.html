@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2,000× Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oréal — Zyad Husseini</title>
+    <meta name="description" content="Most machine learning competitions score one thing: performance. The L'Oréal hackathon we entered scored three — F1, CO₂ emissions, and model size. That single change to the o" />
+    <meta name="author" content="Zyad Husseini" />
+    <link rel="canonical" href="https://www.zyadhusseini.com/writing/loreal-carbon-tradeoff/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="keywords" content="machine learning, green AI, NLP, sustainability, LightGBM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="2,000× Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oréal" />
+    <meta property="og:description" content="Most machine learning competitions score one thing: performance. The L'Oréal hackathon we entered scored three — F1, CO₂ emissions, and model size. That single change to the o" />
+    <meta property="og:url" content="https://www.zyadhusseini.com/writing/loreal-carbon-tradeoff/" />
+    <meta property="og:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <meta property="og:site_name" content="Zyad Husseini" />
+    <meta property="article:author" content="Zyad Husseini" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="2,000× Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oréal" />
+    <meta name="twitter:description" content="Most machine learning competitions score one thing: performance. The L'Oréal hackathon we entered scored three — F1, CO₂ emissions, and model size. That single change to the o" />
+    <meta name="twitter:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "2,000× Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oréal",
+  "description": "Most machine learning competitions score one thing: performance. The L'Oréal hackathon we entered scored three — F1, CO₂ emissions, and model size. That single change to the o",
+  "author": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "alternateName": [
+      "Ziad Husseini",
+      "Zeyad Husseini",
+      "Ziyad Husseini"
+    ],
+    "url": "https://www.zyadhusseini.com/",
+    "image": "https://www.zyadhusseini.com/assets/zyad-husseini.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/zyadmhr/",
+      "https://github.com/ZyadHusseini",
+      "https://linktr.ee/zyadmhrhusseini"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "url": "https://www.zyadhusseini.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.zyadhusseini.com/writing/loreal-carbon-tradeoff/"
+  },
+  "inLanguage": "en",
+  "keywords": "machine learning, green AI, NLP, sustainability, LightGBM",
+  "image": "https://www.zyadhusseini.com/assets/og-image.jpg"
+}
+    </script>
+    <style>:root{--bg:#05070d;--fg:#e2e8f0;--dim:#94a3b8;--faint:#64748b;--line:rgba(148,163,184,.16);--accent:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.75 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(167,139,250,.35)}
+a:hover{border-bottom-color:var(--accent)}
+nav{display:flex;gap:1.25rem;font-size:.875rem;margin-bottom:3.5rem}
+nav a{color:var(--faint);border:0}
+nav a:hover{color:var(--fg)}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 1rem;font-weight:700}
+h2{font-size:1.4rem;line-height:1.3;letter-spacing:-.01em;margin:3rem 0 1rem;font-weight:650}
+h3{font-size:1.12rem;margin:2.25rem 0 .75rem;font-weight:650}
+p{margin:0 0 1.35rem;color:#cbd5e1}
+ul{margin:0 0 1.35rem;padding-left:1.15rem;color:#cbd5e1}
+li{margin:.4rem 0}
+strong{color:#fff;font-weight:650}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:rgba(148,163,184,.12);padding:.15em .4em;border-radius:4px}
+hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+.meta{color:var(--faint);font-size:.875rem;margin:0 0 2.5rem}
+.note{color:var(--faint);font-size:.925rem}
+.tw{overflow-x:auto;margin:0 0 1.5rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:#fff;font-weight:650;white-space:nowrap}
+td{color:#cbd5e1}
+footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--faint)}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a href="/">← Zyad Husseini</a>
+        <a href="/writing/">Writing</a>
+        <a href="/#research">Research</a>
+      </nav>
+      <article>
+      <h1>2,000× Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oréal</h1>
+      <p class="meta">By <a href="/">Zyad Husseini</a> · Data analyst and economist, France &amp; Egypt</p>
+      <p>Most machine learning competitions score one thing: performance. The L'Oréal hackathon we entered scored three — F1, <strong>CO₂ emissions, and model size</strong>. That single change to the objective function changed every engineering decision we made, and it produced a result I still think about.</p>
+      <p>The task was multi-label classification of skin conditions from beauty product descriptions: 6,240 products, labels generated by an LLM, and a text corpus that was marketing copy rather than clinical language.</p>
+      <h2>The insight that shaped the solution</h2>
+      <p>Reading the data, we noticed the labels were not homogeneous. Some conditions were <strong>stated outright</strong> in the product copy — &quot;for acne-prone skin&quot; is not a prediction problem, it is a reading problem. Others had to be <strong>inferred</strong> from ingredients, claims and phrasing that never named the condition.</p>
+      <p>Treating those as one task means your model splits its capacity between extraction and inference, and does neither cleanly. So we split the labels into <strong>strong</strong> (stated) and <strong>weak</strong> (inferred), and gave each its own model. That one decision did more for our scores than any amount of hyperparameter tuning.</p>
+      <h2>Two models, and the number that surprised us</h2>
+      <p>We built both ends of the spectrum deliberately, to see what the trade-off curve actually looked like:</p>
+      <p><strong>The heavyweight — a fine-tuned Longformer</strong> - 0.688 micro-F1 - 113.8 g CO₂ - 3.5 hours on a Tesla T4</p>
+      <p><strong>The lightweight — TF-IDF into LightGBM</strong> - 0.638 micro-F1 (and <strong>0.77 on the strong labels</strong>) - 0.05 g CO₂ - minutes on CPU</p>
+      <p>Run those numbers against each other. The lightweight pipeline delivered roughly <strong>93% of the performance for about 1/2,000th of the carbon</strong>.</p>
+      <p>That ratio is the finding. Not &quot;small models are fine&quot; — that's a platitude — but the specific shape of the curve: the last 7% of F1 cost three orders of magnitude more emissions than the first 93%.</p>
+      <h2>Why the strong-label score matters most</h2>
+      <p>Look again at 0.77 on strong labels. The cheap model was <em>very</em> good at the subtask that was really extraction, and mediocre at genuine inference. The Longformer's advantage was concentrated almost entirely in the weak labels.</p>
+      <p>Which tells you how to deploy this in production: run TF-IDF/LightGBM across the whole catalogue, and reserve the transformer for the subset where inference is actually required. You buy the transformer's advantage only where it exists, instead of paying for it on every row.</p>
+      <p>That is a routing architecture, and the only reason we found it was that the scoring function forced us to look at cost per unit of accuracy rather than accuracy alone.</p>
+      <h2>Presenting it at L'Oréal in Paris</h2>
+      <p>We presented the work at L'Oréal headquarters in Paris. The question that landed hardest was not about the modelling — it was about what the carbon number meant at catalogue scale. 113.8 g against 0.05 g is a rounding error for one training run. Multiply by every retraining cycle, every catalogue refresh, every market, every year, and the ratio stops being academic.</p>
+      <p>This was a five-person team project for Machine Learning 2 at Kedge Business School, and it is the clearest example I have of a constraint improving an engineering outcome. If the brief had scored F1 alone, we would have fine-tuned the largest model that fit in the time budget, reported 0.688, and never discovered that 93% of it was nearly free.</p>
+      <h2>The transferable lesson</h2>
+      <p>Add cost to your objective function before you start, not after you ship. Teams that measure only quality optimise only quality, and then discover the bill.</p>
+      <hr />
+      <p class="note"><em>More of my work — including my MSc thesis on predicting in-game spending and econometrics research on renewable energy and growth — is at <a href="https://www.zyadhusseini.com/">zyadhusseini.com</a>.</em></p>
+      <p class="note"><em>I'm Zyad Husseini, a data analyst and economist working between France and Egypt. <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a> · <a href="https://github.com/ZyadHusseini">GitHub</a></em></p>
+      </article>
+      <footer>
+        Written by <strong>Zyad Husseini</strong> — also written Ziad, Zeyad or Ziyad Husseini.
+        MSc Data Analytics at Kedge Business School; BA Econometrics &amp; Quantitative Economics,
+        The American University in Cairo.<br /><br />
+        <a href="/">zyadhusseini.com</a> ·
+        <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a> ·
+        <a href="https://github.com/ZyadHusseini">GitHub</a>
+      </footer>
+    </div>
+  </body>
+</html>

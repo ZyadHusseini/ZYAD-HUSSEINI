@@ -128,6 +128,28 @@ Competes in Tekken under the tag ELECTRO_SMG, playing Victor.
 - Associate Data Engineer in SQL (DataCamp, 2026)
 - McKinsey Forward Program (McKinsey & Company, 2026)
 
+## Writing
+
+Long-form essays, each at its own URL on the canonical site.
+
+- I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding.
+  Why a null result plus a control condition is a stronger claim than a tuned classifier.
+  https://www.zyadhusseini.com/writing/null-result-in-game-spending/
+- Renewable Energy Adoption Slowed Short-Run Growth Across 7 Countries. The Policy Answer Isn't to Stop.
+  What a robust negative coefficient does and does not license, and why sequencing beats slowing.
+  https://www.zyadhusseini.com/writing/renewable-energy-growth/
+- 2,000x Less Carbon for 93% of the Accuracy: What We Learned Building for L'Oreal
+  Scoring CO2 alongside F1 produced a routing architecture nobody would have found otherwise.
+  https://www.zyadhusseini.com/writing/loreal-carbon-tradeoff/
+- Egyptian Logistics Runs on WhatsApp and Excel. Here's What Building Real Reporting on Top of That Actually Takes.
+  Definitional alignment, tolerant ingestion, ERP ordering and bilingual entity resolution.
+  https://www.zyadhusseini.com/writing/egypt-logistics-data/
+- From El Haras El Gomhory to the Tekken Egyptian League: What Competition Transfers, and What Doesn't
+  Reads and composure transfer between basketball, FIFA and Tekken. Frame data does not.
+  https://www.zyadhusseini.com/writing/tekken-egypt-esports/
+
+Index: https://www.zyadhusseini.com/writing/
+
 ## Profiles
 
 - LinkedIn: https://www.linkedin.com/in/zyadmhr/

@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run sync:faq && npm run sync:video && npm run sync:sitemap && npm run check:altnames && tsc --noEmit && vite build",
+    "build": "npm run sync:writing && npm run sync:faq && npm run sync:video && npm run sync:sitemap && npm run check:altnames && tsc --noEmit && vite build",
     "preview": "vite preview",
     "sync:faq": "vite-node scripts/sync-faq-schema.mjs",
     "check:altnames": "vite-node scripts/check-altnames.mjs",
     "postbuild": "node scripts/indexnow.mjs",
     "sync:sitemap": "node scripts/sync-sitemap-lastmod.mjs",
+    "sync:writing": "node scripts/build-writing.mjs",
     "sync:video": "vite-node scripts/sync-video-schema.mjs"
   },
   "dependencies": {

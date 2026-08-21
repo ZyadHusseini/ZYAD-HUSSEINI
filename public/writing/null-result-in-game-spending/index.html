@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding. — Zyad Husseini</title>
+    <meta name="description" content="My MSc thesis at Kedge Business School set out to answer a question the mobile games industry treats as settled: which player behaviours predict who will spend money? Session" />
+    <meta name="author" content="Zyad Husseini" />
+    <link rel="canonical" href="https://www.zyadhusseini.com/writing/null-result-in-game-spending/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="keywords" content="machine learning, data science, game analytics, research, econometrics" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding." />
+    <meta property="og:description" content="My MSc thesis at Kedge Business School set out to answer a question the mobile games industry treats as settled: which player behaviours predict who will spend money? Session" />
+    <meta property="og:url" content="https://www.zyadhusseini.com/writing/null-result-in-game-spending/" />
+    <meta property="og:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <meta property="og:site_name" content="Zyad Husseini" />
+    <meta property="article:author" content="Zyad Husseini" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding." />
+    <meta name="twitter:description" content="My MSc thesis at Kedge Business School set out to answer a question the mobile games industry treats as settled: which player behaviours predict who will spend money? Session" />
+    <meta name="twitter:image" content="https://www.zyadhusseini.com/assets/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding.",
+  "description": "My MSc thesis at Kedge Business School set out to answer a question the mobile games industry treats as settled: which player behaviours predict who will spend money? Session",
+  "author": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "alternateName": [
+      "Ziad Husseini",
+      "Zeyad Husseini",
+      "Ziyad Husseini"
+    ],
+    "url": "https://www.zyadhusseini.com/",
+    "image": "https://www.zyadhusseini.com/assets/zyad-husseini.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/zyadmhr/",
+      "https://github.com/ZyadHusseini",
+      "https://linktr.ee/zyadmhrhusseini"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Zyad Husseini",
+    "url": "https://www.zyadhusseini.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.zyadhusseini.com/writing/null-result-in-game-spending/"
+  },
+  "inLanguage": "en",
+  "keywords": "machine learning, data science, game analytics, research, econometrics",
+  "image": "https://www.zyadhusseini.com/assets/og-image.jpg"
+}
+    </script>
+    <style>:root{--bg:#05070d;--fg:#e2e8f0;--dim:#94a3b8;--faint:#64748b;--line:rgba(148,163,184,.16);--accent:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.75 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(167,139,250,.35)}
+a:hover{border-bottom-color:var(--accent)}
+nav{display:flex;gap:1.25rem;font-size:.875rem;margin-bottom:3.5rem}
+nav a{color:var(--faint);border:0}
+nav a:hover{color:var(--fg)}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 1rem;font-weight:700}
+h2{font-size:1.4rem;line-height:1.3;letter-spacing:-.01em;margin:3rem 0 1rem;font-weight:650}
+h3{font-size:1.12rem;margin:2.25rem 0 .75rem;font-weight:650}
+p{margin:0 0 1.35rem;color:#cbd5e1}
+ul{margin:0 0 1.35rem;padding-left:1.15rem;color:#cbd5e1}
+li{margin:.4rem 0}
+strong{color:#fff;font-weight:650}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:rgba(148,163,184,.12);padding:.15em .4em;border-radius:4px}
+hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+.meta{color:var(--faint);font-size:.875rem;margin:0 0 2.5rem}
+.note{color:var(--faint);font-size:.925rem}
+.tw{overflow-x:auto;margin:0 0 1.5rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:#fff;font-weight:650;white-space:nowrap}
+td{color:#cbd5e1}
+footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--faint)}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a href="/">← Zyad Husseini</a>
+        <a href="/writing/">Writing</a>
+        <a href="/#research">Research</a>
+      </nav>
+      <article>
+      <h1>I Built 13 Models to Predict Who Spends Money in Games. All 13 Failed — and That Was the Finding.</h1>
+      <p class="meta">By <a href="/">Zyad Husseini</a> · Data analyst and economist, France &amp; Egypt</p>
+      <p>My MSc thesis at Kedge Business School set out to answer a question the mobile games industry treats as settled: which player behaviours predict who will spend money? Session length, retention, level progression, demographics — the whole engagement stack is supposed to tell you who the payers are.</p>
+      <p>I assembled five public datasets covering more than 50,000 players and 52,000 games across mobile, Steam and Roblox catalogues. I built an interpretable logistic regression as a baseline, then benchmarked thirteen classifiers against it — random forests, gradient boosting, the usual suspects — with proper cross-validation and class-imbalance handling, because payers are a small minority of any player base.</p>
+      <p>Every single one landed at chance. ROC AUC between 0.48 and 0.52. Not one feature cleared conventional significance.</p>
+      <h2>The temptation at that point is to torture the data</h2>
+      <p>There is a well-worn path out of a result like this. You resample until something sticks. You engineer thirty new features and report the one that survives. You quietly switch metrics until a number looks respectable. You find a subgroup where p dips under 0.05 and write the paper about the subgroup.</p>
+      <p>I want to be honest that this was tempting, because a thesis that says &quot;nothing predicted anything&quot; reads like a thesis that failed. But a null result you massage into a finding is not a finding. It is a fabrication with error bars.</p>
+      <p>So instead I asked the more useful question: <strong>is the signal genuinely absent from the world, or absent from my data?</strong></p>
+      <h2>Building a control to tell those two things apart</h2>
+      <p>That distinction is the whole ballgame, and it is testable. If my pipeline is broken, it will fail on data where the signal is known to exist. If my pipeline is sound, it will succeed there and fail only where the data is thin.</p>
+      <p>So I ran the identical pipeline against two genuine game-level catalogues — real data, not synthetic. It reached <strong>0.95 ROC AUC</strong>. Using natural language processing on the store descriptions alone, it recovered the freemium monetisation signal without being told which games were free-to-play.</p>
+      <p>Same code. Same methods. Same person writing it. Wildly different result.</p>
+      <p>That is what turns &quot;my models failed&quot; into a claim you can actually defend: the pipeline works. The player-level datasets are the problem.</p>
+      <h2>What the data did show</h2>
+      <p>Here is the part that makes the null result interesting rather than merely disappointing. The <em>structure</em> of spending was crystal clear even though the <em>prediction</em> of it was impossible:</p>
+      <ul><li>A revenue Gini coefficient of <strong>0.87</strong></li><li>The top <strong>1% of payers generating 39% of revenue</strong></li><li>A playtime Gini of <strong>0.83</strong></li></ul>
+      <p>These are the whale dynamics the industry describes, and they are present and stark. Economic theory predicted this concentration and the data delivered it. What the data would not deliver was any way to identify <em>which individual</em> becomes a whale from behavioural features alone.</p>
+      <p>Concentration is visible at the population level. Individual prediction is not. Those are different claims, and public data supports exactly one of them.</p>
+      <h2>Why this matters beyond my thesis</h2>
+      <p>The practical implication is unglamorous and, I think, important: credible prediction of individual spending requires real player-level telemetry. The public and synthetic datasets that circulate on Kaggle and in academic replication packages do not carry that signal, and any paper claiming to predict individual monetisation from them deserves a control condition before you believe it.</p>
+      <p>There is an ethical implication too, and it cuts in a direction I did not expect. Behaviour-based monetisation — dynamic pricing, targeted offers timed to a player's vulnerability — depends on exactly the individual-level predictability I could not find in public data. Studios with real telemetry may well have it. Researchers auditing those practices from the outside largely do not. That asymmetry is worth naming: the people best positioned to scrutinise behavioural monetisation have the least access to the data required to do it.</p>
+      <h2>The thing I actually learned</h2>
+      <p>I came in wanting to build a model that worked. I left having built a control condition that proved my model's failure was informative rather than incompetent.</p>
+      <p>That is a less satisfying sentence to write than &quot;my classifier hit 0.95.&quot; It is a considerably more useful one to have earned.</p>
+      <hr />
+      <p class="note"><em>The full thesis — Predicting In-Game Spending Behaviour Using Machine Learning, supervised by Dr. Tianyuan Zhang at Kedge Business School — is available at <a href="https://www.zyadhusseini.com/">zyadhusseini.com</a>, along with the proposal and my earlier econometrics work on renewable energy and economic growth.</em></p>
+      <p class="note"><em>I'm Zyad Husseini — a data analyst and economist working between France and Egypt. MSc Data Analytics at Kedge Business School, BA Econometrics and Quantitative Economics from The American University in Cairo. You can find me on <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a> and <a href="https://github.com/ZyadHusseini">GitHub</a>.</em></p>
+      </article>
+      <footer>
+        Written by <strong>Zyad Husseini</strong> — also written Ziad, Zeyad or Ziyad Husseini.
+        MSc Data Analytics at Kedge Business School; BA Econometrics &amp; Quantitative Economics,
+        The American University in Cairo.<br /><br />
+        <a href="/">zyadhusseini.com</a> ·
+        <a href="https://www.linkedin.com/in/zyadmhr/">LinkedIn</a> ·
+        <a href="https://github.com/ZyadHusseini">GitHub</a>
+      </footer>
+    </div>
+  </body>
+</html>

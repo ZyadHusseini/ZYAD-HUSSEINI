@@ -1,6 +1,15 @@
 import { ArrowUp, Github, Instagram, Link, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { identity } from "../data/content";
 
+/** Mirrors the pages emitted by scripts/build-writing.mjs. */
+const writingLinks = [
+  { href: "/writing/null-result-in-game-spending/", label: "Predicting in-game spending" },
+  { href: "/writing/renewable-energy-growth/", label: "Renewable energy & growth" },
+  { href: "/writing/loreal-carbon-tradeoff/", label: "Green AI at L'Oréal" },
+  { href: "/writing/egypt-logistics-data/", label: "Egyptian logistics data" },
+  { href: "/writing/tekken-egypt-esports/", label: "Tekken in Egypt" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -44,6 +53,25 @@ export default function Footer() {
             <ArrowUp className="h-4 w-4" aria-hidden />
           </button>
         </div>
+
+        {/* Real anchors to the static /writing/ pages. They live outside the
+            React app, so this footer and the noscript block in index.html are
+            the only internal links Google has to reach them — without one they
+            are orphans that the sitemap alone would not get crawled properly. */}
+        <nav aria-label="Essays" className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+          <a href="/writing/" className="text-slate-400 transition-colors hover:text-white">
+            Writing
+          </a>
+          {writingLinks.map((w) => (
+            <a
+              key={w.href}
+              href={w.href}
+              className="text-slate-500 transition-colors hover:text-white"
+            >
+              {w.label}
+            </a>
+          ))}
+        </nav>
 
         <div className="text-center">
           <p className="text-sm text-slate-400">
