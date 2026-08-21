@@ -149,7 +149,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What does Zyad Husseini do?",
     answer:
-      "He turns business data into decisions — building Power BI dashboards and data models, running econometric analysis, and developing AI products. He currently works on AI automation at BUB AI, AI product development at Brayn Solutions and investment analysis at Media Trade, alongside a Business Development Associate role and a Research and Marketing Specialist role.",
+      "He turns business data into decisions — building Power BI dashboards and data models, running econometric analysis, and developing AI products. He currently works on AI automation at BUB AI and AI product development at Brayn Solutions, alongside a Business Development Associate role and a Research and Marketing Specialist role. He previously covered investment analysis at Media Trade.",
   },
   {
     question: "Where did he study?",
@@ -280,7 +280,9 @@ export const mainExperience: Job[] = [
   {
     role: "Investment Analyst",
     company: "Media Trade",
-    period: "Dec 2025 – Present",
+    // Ended; exact end month to be confirmed. "2026" is certain rather than
+    // assumed: the role began Dec 2025 and had concluded by Aug 2026.
+    period: "Dec 2025 – 2026",
     type: "Full-time",
     description: "Analyzing investment opportunities and providing financial insights.",
     tags: ["Financial Analysis", "Investment Research", "Risk Assessment"],
@@ -732,9 +734,9 @@ export const companies: Company[] = [
   },
   {
     name: "Media Trade",
-    relation: "Current role",
+    relation: "Previous",
     role: "Investment Analyst",
-    period: "Dec 2025 — present",
+    period: "Dec 2025 — 2026",
     summary: "Analysing investment opportunities and producing the financial reads behind them.",
     highlights: ["Financial analysis", "Investment research", "Risk assessment"],
   },
